@@ -110,3 +110,16 @@ Test: `node test-v6.mjs`. Dört planda boşluksuz/tekrarsız 6.236 ayet kapsamı
 - Destekleyen kurulu PWA ortamlarında Oku / Dinle / Ezber / Planım uygulama kısayolları.
 
 Test: `node test-v7.mjs`. İki ayet × üç tekrar × üç tur = 18 oynatma sırası, sonlandırma, otomatik değerlendirme yapılmaması, hatırlama modu, kaynakla eşleşen ipucu, zamanlayıcı, okuyucu değişimi, yedek geri yükleme, mobil düzen ve çevrimdışı çalışma kontrol edilir. Ses, otomatik testte yerel WAV yanıtıyla taklit edilir; ayrıca gerçek CDN ile iki ayetlik döngünün tamamlanıp durduğu doğrulanmıştır.
+
+## v8: Sure Atlası
+
+- `#atlas` veya `#atlas/55`: 114 sureyi mushaf sırasına göre serpantin bir görsel dizinde ya da listede keşfet. Görsel yerleşim coğrafi konum veya vahiy sırası değildir.
+- Daire boyutu ayet sayısıyla artar. Mekke/Medine renkleri doğrudan kaynak veri sınıflandırmasını kullanır. Favoriler yıldız, okundu işaretlerinin oranı çevre yayıyla gösterilir.
+- Türkçe/Arapça sure adı veya numarası araması; iniş yeri ve 1–20 / 21–100 / 101+ ayet filtreleri. “Rastgele keşfet” yalnızca filtrelere uyan surelerden seçim yapar, dini bir öneri sıralaması değildir.
+- Seçili sure kartı: ayet sayısı, iniş yeri, başladığı cüz ve ilk ayetin değişmeden alınan Arapça metni/Türkçe meali. Okumaya, dinlemeye, ayet çalışmasına ve ezber stüdyosuna geçiş.
+- Okundu sayısı, günlük kayıtlardaki benzersiz ayet referanslarından türetilir; bir ayetin farklı günlerde işaretlenmesi sayıyı artırmaz. Bu, doğrulanmış okuma veya ezber ölçümü değildir.
+- SVG haritası klavyeyle seçilebilir: ok tuşlarıyla uygun sureler arasında sırayla gezinme, Home/End, Enter/Space. Harita yakınlaştırılabilir ve kaydırılabilir. Dar ekranlarda ilk tercih liste görünümüdür; görünüm tercihi cihazda saklanır.
+- Seçili sure URL'de korunur. Filtreler URL'ye yazılmaz; doğrudan bağlantı seçili sureyi filtresiz açar. `nur-atlas-view` ve `nur-atlas-selection` yalnızca yerel gezinme tercihleridir, yedeğin parçası değildir.
+- Önceden hazırlanmış çevrimdışı içerikle harita, filtreler ve sure metnine geçiş internetsiz çalışır. Sesli dinleme hâlâ internet gerektirir.
+
+Test: `node test-v8.mjs`. Harita/liste sure sayısı ve ayet toplamı, kaynakla birebir ilk ayet önizlemesi, benzersiz okundu işaretleri, klavye seçimi, favoriler, yakınlaştırma, filtreler, filtre içi rastgele seçim, normalize sure araması, doğrudan bağlantı/geri gezinme, okuma/dinleme/çalışma/stüdyo geçişleri, mobil taşma ve çevrimdışı atlas doğrulanır. `test-pages.mjs`, Pages alt dizininde `#atlas/55` bağlantısını da kontrol eder.
