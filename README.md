@@ -64,3 +64,13 @@ Gerçek service worker kurulumundan sonra tarayıcı bağlamı çevrimdışı ya
 Tam yayınlama adımları: [GITHUB-YAYINLAMA.md](GITHUB-YAYINLAMA.md).
 
 `.github/workflows/pages.yml`, `main` dalına push yapıldığında GitHub Pages'e dağıtır. Repository ayarlarında Pages kaynağı GitHub Actions olmalıdır. Kişisel erişim anahtarı gerekmez; workflow GitHub'ın sınırlı izinli geçici kimliğini kullanır. `npm run build` bağımsız statik dosyaları `dist/` klasörüne hazırlar; Pages alt yolu, manifest, paylaşım URL'leri ve service worker kapsamı derlemede uyarlanır.
+
+## v4: Arama ve mobil gezinme
+
+- Harekesiz Arapça eşleştirme (hareke/tatvil ve bazı elif biçimleri yalnızca arama indeksinde normalleştirilir). Görünen kutsal metin değiştirilmez.
+- Eşleşen metin vurgusu; sure/ayet ve Mekke/Medine filtreleri.
+- Sonuçların tümüne 30'ar ayetlik artımlı listelerle erişim; arama bağlantısı yeniden açılabilir.
+- Favori sureler tarayıcıda korunur ve JSON yedeğine dahil edilir.
+- Telefonda beş bölümlü alt menü, erişilebilir ayarlar ve odak moduyla uyumlu yerleşim.
+
+Test: `node test-v4.mjs`. Önceki testler alt menünün masaüstünde gizli olmasını dikkate alacak şekilde güncellenmiştir.

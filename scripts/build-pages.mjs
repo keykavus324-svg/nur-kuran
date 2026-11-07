@@ -13,7 +13,7 @@ function adapt(text){
  return text.replace(/(["'`])\/(?!\/)/g,(_,q)=>q+base)
   .replace(/url\(\/(?!\/)/g,'url('+base)
   .replace('${location.origin}/#','${location.origin}'+base+'#')
-  .replaceAll('nur-offline-v3',cacheName)
+  .replace(/nur-offline-v[0-9]+/g,cacheName)
   .replace("key.startsWith('nur-offline-')",`key.startsWith('${prefix}')`);
 }
 await rm('dist',{recursive:true,force:true});
