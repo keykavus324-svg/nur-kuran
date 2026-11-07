@@ -131,7 +131,7 @@ Testler: `node test-v8.mjs` atlas veri/filtre/favori/bağlantı/çevrimdışı d
 - Daha belirgin yardımcı metinler, mobil dokunma alanları ve odak çerçeveleri.
 - Grup değiştirme ve favori işlemleri yeniden çizimden sonra klavye odağını korur; hareket azaltma tercihinde atlas kaydırması animasyonsuzdur.
 - `test-v9.mjs` keşif girişini ve odak korumasını da kontrol eder. V8 atlas ve Pages alt dizin/çevrimdışı testleri yeniden geçirilmiştir.
-- Bu sürüm yerel önizlemedir; henüz GitHub Pages'e yayınlanmamıştır.
+- V10 tasarımı, V11 ile birlikte GitHub Pages üzerinde yayınlandı.
 
 ## v11: Konu seçkileri ve ilk okuma rehberi
 
@@ -139,4 +139,14 @@ Testler: `node test-v8.mjs` atlas veri/filtre/favori/bağlantı/çevrimdışı d
 - Konu seçkilerinin referansları değiştirilmedi; ayetler tam sure içindeki konumlarına açılır. Seçkilerin editoryal olduğu açıkça belirtilir.
 - Klavye ile çalışan yerel `details/summary` öğeleri; mobil, koyu tema ve azaltılmış hareket stilleri.
 - `node test-v11.mjs`: altı seçki, kaynak sureye geçiş, Fâtiha başlangıcı, rehber klavyesi ve 320–1024px taşma kontrolleri. V8, V9 ve Pages çevrimdışı testleri de geçti.
-- Yerel önizleme; GitHub Pages yayını değiştirilmedi.
+- V11, GitHub Pages üzerinde yayınlandı.
+
+## v12: Mobil uyum ve okuma tasarımı
+
+- Mobilde sıcak açık renk paleti, daha belirgin alt gezinme, daha büyük sure başlıkları ve okuma kartları. Gece modu korunur.
+- Ayet araçları 44×44 CSS piksel; en dar ekranlarda düzenli iki satıra geçer. Meal 16px, metin girişleri/seçiciler 16px; Arapça boyutu kullanıcı tercihinden alınmaya devam eder.
+- Çentik ve ana ekran göstergesi için viewport-fit ve safe-area boşlukları. Oynatıcı alt gezinmeden yukarıda, son içeriğe erişmek için ek alt boşluk.
+- Mobil pencereler alttan açılan, ekran yüksekliğine uyumlu panellerdir; arka sayfa kaydırması engellenir.
+- 320px'de sure listesi taşması giderildi. Azaltılmış hareket tercihinde ayete geçiş animasyonsuzdur.
+- `node test-v12.mjs`: 9 ekranı 320/390/430/768px ve 844×390 yatay görünümde, dokunma hedeflerini, yazı boyutlarını, ayarlar panelini, odak modunu ve 320px ses oynatıcısını kontrol eder. Ses WAV ile taklit edilir.
+- V2–V11 regresyonları ve Pages alt dizin/çevrimdışı testleri geçti. Ek olarak WebKit iPhone 13 emülasyonunda yedi ekran ve ayarlar paneli kontrol edildi; fiziksel cihaz testi değildir.
