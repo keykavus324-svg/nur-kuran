@@ -111,15 +111,32 @@ Test: `node test-v6.mjs`. Dört planda boşluksuz/tekrarsız 6.236 ayet kapsamı
 
 Test: `node test-v7.mjs`. İki ayet × üç tekrar × üç tur = 18 oynatma sırası, sonlandırma, otomatik değerlendirme yapılmaması, hatırlama modu, kaynakla eşleşen ipucu, zamanlayıcı, okuyucu değişimi, yedek geri yükleme, mobil düzen ve çevrimdışı çalışma kontrol edilir. Ses, otomatik testte yerel WAV yanıtıyla taklit edilir; ayrıca gerçek CDN ile iki ayetlik döngünün tamamlanıp durduğu doğrulanmıştır.
 
-## v8: Sure Atlası
+## v9: Yenilenen Sure Atlası
 
-- `#atlas` veya `#atlas/55`: 114 sureyi mushaf sırasına göre serpantin bir görsel dizinde ya da listede keşfet. Görsel yerleşim coğrafi konum veya vahiy sırası değildir.
-- Daire boyutu ayet sayısıyla artar. Mekke/Medine renkleri doğrudan kaynak veri sınıflandırmasını kullanır. Favoriler yıldız, okundu işaretlerinin oranı çevre yayıyla gösterilir.
-- Türkçe/Arapça sure adı veya numarası araması; iniş yeri ve 1–20 / 21–100 / 101+ ayet filtreleri. “Rastgele keşfet” yalnızca filtrelere uyan surelerden seçim yapar, dini bir öneri sıralaması değildir.
-- Seçili sure kartı: ayet sayısı, iniş yeri, başladığı cüz ve ilk ayetin değişmeden alınan Arapça metni/Türkçe meali. Okumaya, dinlemeye, ayet çalışmasına ve ezber stüdyosuna geçiş.
-- Okundu sayısı, günlük kayıtlardaki benzersiz ayet referanslarından türetilir; bir ayetin farklı günlerde işaretlenmesi sayıyı artırmaz. Bu, doğrulanmış okuma veya ezber ölçümü değildir.
-- SVG haritası klavyeyle seçilebilir: ok tuşlarıyla uygun sureler arasında sırayla gezinme, Home/End, Enter/Space. Harita yakınlaştırılabilir ve kaydırılabilir. Dar ekranlarda ilk tercih liste görünümüdür; görünüm tercihi cihazda saklanır.
-- Seçili sure URL'de korunur. Filtreler URL'ye yazılmaz; doğrudan bağlantı seçili sureyi filtresiz açar. `nur-atlas-view` ve `nur-atlas-selection` yalnızca yerel gezinme tercihleridir, yedeğin parçası değildir.
-- Önceden hazırlanmış çevrimdışı içerikle harita, filtreler ve sure metnine geçiş internetsiz çalışır. Sesli dinleme hâlâ internet gerektirir.
+- `#atlas` veya `#atlas/55`: 114 sureyi mushaf sırasıyla kartlar veya tam liste üzerinden keşfet. V8'deki numaralı SVG harita ve yakınlaştırma kaldırıldı.
+- Kırık beyaz, adaçayı ve kum tonları; kemer çizgileri, Arapça/Türkçe adlar ve koyu yeşil seçili kart. Kart renkleri dekoratiftir; iniş yeri kart metninde belirtilir.
+- Masaüstünde 12, 600px ve altındaki ekranlarda 6 kartlık gruplar. Önceki/sonraki ve grup seçicisi ile bütün 114 sureye erişim. Ekran genişliği değiştiğinde grup boyutu güncellenir.
+- Türkçe/Arapça ad veya numara arama, iniş yeri/ayet sayısı filtreleri ve yalnızca eşleşenler arasından rastgele seçim.
+- Favori yıldızı ve açıkça okundu işaretlenen benzersiz ayetlerin ilerleme çubuğu. Kişisel kayıtlar yalnızca cihazda saklanır; otomatik okuma veya ezber değerlendirmesi yapılmaz.
+- Seçili sure bilgisi, kaynaktan aynen alınan ilk ayet/meal ve okuma, dinleme, çalışma, ezber bağlantıları korunur.
+- Ok tuşları, Home/End ve Enter/Space ile klavye gezinmesi; grup sınırlarında seçili kart otomatik görünür olur. Mobilde kart seçimi ayrıntı paneline götürür; grup değiştirme ekranı aşağı kaydırmaz.
+- İlk görünüm kartlardır; önceki açık görünüm tercihi korunur. `nur-atlas-view` ve `nur-atlas-selection` yedeğe dahil olmayan yerel tercihlerdir. Filtreler geçicidir, seçili sure URL'de korunur.
+- Önceden hazırlanmış çevrimdışı içerikle kartlar, filtreler ve okuma kullanılabilir. Ses internet gerektirir. Koyu tema ve azaltılmış hareket tercihi desteklenir.
 
-Test: `node test-v8.mjs`. Harita/liste sure sayısı ve ayet toplamı, kaynakla birebir ilk ayet önizlemesi, benzersiz okundu işaretleri, klavye seçimi, favoriler, yakınlaştırma, filtreler, filtre içi rastgele seçim, normalize sure araması, doğrudan bağlantı/geri gezinme, okuma/dinleme/çalışma/stüdyo geçişleri, mobil taşma ve çevrimdışı atlas doğrulanır. `test-pages.mjs`, Pages alt dizininde `#atlas/55` bağlantısını da kontrol eder.
+Testler: `node test-v8.mjs` atlas veri/filtre/favori/bağlantı/çevrimdışı davranışlarını; `node test-v9.mjs` 114 kartın tamamına erişimi, grup sınırlarında klavyeyi, mobil grup boyutunu ve yatay taşmayı doğrular. `test-pages.mjs`, Pages alt dizininde `#atlas/55` ve çevrimdışı yenilemeyi kontrol eder. V2–V7 regresyonları da geçmiştir. Ses regresyonlarında WAV yanıtları taklit edilir.
+
+## v10: Keşfet ekranı ve kullanım rahatlığı
+
+- Atlas kartlarıyla uyumlu, kaynak verideki Fâtiha/Rahmân/İhlâs adlarını kullanan yeni keşif giriş alanı. Dekoratif kartlar ekran okuyuculardan gizlidir; gerçek gezinti açıkça adlandırılmış düğmeyle yapılır.
+- Daha belirgin yardımcı metinler, mobil dokunma alanları ve odak çerçeveleri.
+- Grup değiştirme ve favori işlemleri yeniden çizimden sonra klavye odağını korur; hareket azaltma tercihinde atlas kaydırması animasyonsuzdur.
+- `test-v9.mjs` keşif girişini ve odak korumasını da kontrol eder. V8 atlas ve Pages alt dizin/çevrimdışı testleri yeniden geçirilmiştir.
+- Bu sürüm yerel önizlemedir; henüz GitHub Pages'e yayınlanmamıştır.
+
+## v11: Konu seçkileri ve ilk okuma rehberi
+
+- Keşfet sayfasında üç adımlık karşılama, altı yeniden tasarlanmış konu kartı ve yerleşik açılır/kapanır kısa rehber.
+- Konu seçkilerinin referansları değiştirilmedi; ayetler tam sure içindeki konumlarına açılır. Seçkilerin editoryal olduğu açıkça belirtilir.
+- Klavye ile çalışan yerel `details/summary` öğeleri; mobil, koyu tema ve azaltılmış hareket stilleri.
+- `node test-v11.mjs`: altı seçki, kaynak sureye geçiş, Fâtiha başlangıcı, rehber klavyesi ve 320–1024px taşma kontrolleri. V8, V9 ve Pages çevrimdışı testleri de geçti.
+- Yerel önizleme; GitHub Pages yayını değiştirilmedi.

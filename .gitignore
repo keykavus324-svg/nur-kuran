@@ -28,3 +28,15 @@ v7-*.png
 studio-v7.js
 v8-*.png
 atlas-v8.js
+
+# V9 local visual review artifacts
+v9-*.png
+atlas-cards-v9.js
+browser-install.log
+nur-github-pages-v9.zip
+
+v10-*.png
+polish-v10.py
+
+v11-*.png
+polish-v11.py
