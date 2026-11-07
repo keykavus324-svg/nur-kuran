@@ -5,12 +5,22 @@ const raw=process.env.PAGES_BASE_PATH || '';
 if (raw && !/^\/?[a-zA-Z0-9_.\/-]*$/.test(raw)) throw new Error('Invalid Pages base path');
 const base='/' + raw.replace(/^\/+|\/+$/g,'') + (raw.replace(/\//g,'') ? '/' : '');
 const prefix='nur-offline-'+createHash('sha256').update(base).digest('hex').slice(0,8)+'-';
-const sourceFiles=['public/app.js','public/style.css','public/sw.js','index.html'];
+async function sourceTree(dir){
+ const files=[];
+ for(const entry of await readdir(dir,{withFileTypes:true})){
+  const file=path.join(dir,entry.name);
+  if(entry.isDirectory())files.push(...await sourceTree(file));
+  else if(entry.isFile())files.push(file);
+ }
+ return files.sort();
+}
+const sourceFiles=[...await sourceTree('public'),'index.html','scripts/build-pages.mjs'];
 const version=createHash('sha256');
-for(const file of sourceFiles)version.update(await readFile(file));
+for(const file of sourceFiles){version.update(file);version.update(await readFile(file));}
 const cacheName=prefix+version.digest('hex').slice(0,12);
 function adapt(text){
- return text.replace(/(["'`])\/(?!\/)/g,(_,q)=>q+base)
+ return text.replace(/(["'`])\/(?=[A-Za-z])/g,(_,q)=>q+base)
+  .replace(/scope:\s*(["'])\/\1/g,(_,q)=>`scope:${q}${base}${q}`)
   .replace(/url\(\/(?!\/)/g,'url('+base)
   .replace('${location.origin}/#','${location.origin}'+base+'#')
   .replace(/nur-offline-v[0-9]+/g,cacheName)
