@@ -85,3 +85,14 @@ Test: `node test-v4.mjs`. Önceki testler alt menünün masaüstünde gizli olma
 - Günün ayeti: 12 referanslık editoryal seçki, cihazın yerel takvim gününe göre dönüşümlü gösterilir. Arapça metin ve meal mevcut yerel veri dosyalarından aynen alınır.
 
 Test: `node test-v5.mjs`. Okuyucu değiştirme, duraklatılmış halde değiştirme, tercih kalıcılığı, saat ilerleterek zamanlayıcı, sure sonunda durma, mobil yerleşim ve gün değişiminde kaynak metni doğrulanır. Otomatik testte ses yanıtları taklit edilir; gerçek CDN oynatma kontrolü ayrıca yapılmıştır.
+
+## v6: Okuma rotası ve ayet çalışma ekranı
+
+- `#plan`: 30 / 60 / 90 / 180 bölümlük tam Kur’an okuma planı. Bölümler global ayet sırasını eşit aralıklara ayırır, tüm 6.236 ayeti tam bir kez içerir. Bunlar cüz bölümleri değildir.
+- `#bolum/1`: bu cihazdaki etkin planın birinci bölümü. Plan oluşturulmamışsa plan ekranına dönülür. Bölüm işaretleri yalnızca kullanıcının “Bölümü tamamladım” düğmesiyle değişir ve geri alınabilir. Günlük ayet okuma sayacı otomatik artırılmaz.
+- Plan yapılandırması ve tamamlanan bölüm listesi `nur-reading-plan` altında saklanır. Plan değişikliği bölüm ilerlemesini sıfırlar; notları ve günlük geçmişi değiştirmez. Yedekler planı da içerir. İçe aktarmada plan varsa mevcut planın yerine geçeceği onay ekranında belirtilir; eski plansız yedekler planı değiştirmez.
+- `#calisma/1/1`: tek ayet için çalışma alanı; önceki/sonraki ayet, tam sureye dönüş, kaynak cüz/sayfa bilgisi, yer imi, okundu ve dinleme.
+- Çalışma alanındaki notlar yazarken cihazda saklanır. Boşaltılan not kaldırılır. Kişisel notlar Kur’an metni, meal veya tefsir değildir ve ayrı gösterilir. Tefsir üretilmez.
+- Not defterinde not içeriği ve sure adına göre filtreleme; çalışma alanına hızlı erişim.
+
+Test: `node test-v6.mjs`. Dört planda boşluksuz/tekrarsız 6.236 ayet kapsamı, oturum kimlikleri, tamamlama/geri alma, sureler arası çalışma gezinmesi, ilk/son ayet sınırları, not kaydı/kaçışları/filtreleme, plan yedeği, mobil görünüm ve çevrimdışı çalışma doğrulanır.
