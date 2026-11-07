@@ -38,6 +38,7 @@ await writeFile('dist/offline-shell.json',JSON.stringify({html}));
 const manifest=JSON.parse(await readFile('public/manifest.webmanifest','utf8'));
 for(const key of ['id','start_url','scope'])manifest[key]=base;
 for(const icon of manifest.icons)icon.src=base+icon.src.replace(/^\//,'');
+for(const shortcut of manifest.shortcuts||[])shortcut.url=base+shortcut.url.replace(/^\//,'');
 await writeFile('dist/manifest.webmanifest',JSON.stringify(manifest));
 await writeFile('dist/.nojekyll','');
 console.log(`GitHub Pages build ready: dist/ (base: ${base}, cache: ${cacheName})`);

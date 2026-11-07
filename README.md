@@ -96,3 +96,17 @@ Test: `node test-v5.mjs`. Okuyucu değiştirme, duraklatılmış halde değişti
 - Not defterinde not içeriği ve sure adına göre filtreleme; çalışma alanına hızlı erişim.
 
 Test: `node test-v6.mjs`. Dört planda boşluksuz/tekrarsız 6.236 ayet kapsamı, oturum kimlikleri, tamamlama/geri alma, sureler arası çalışma gezinmesi, ilk/son ayet sınırları, not kaydı/kaçışları/filtreleme, plan yedeği, mobil görünüm ve çevrimdışı çalışma doğrulanır.
+
+
+## v7: Ezber ve Tekrar Stüdyosu
+
+- `#studio`: sure ve başlangıç/bitiş ayeti seçimi; her ayeti 1 / 3 / 5 / 10 kez, tüm aralığı 1 / 3 / 5 tur dinleme. Son tur sonunda durur; aralık dışına otomatik geçmez.
+- Dinleme sayısı, tur göstergesi, duraklat/devam et, sonlandır ve okuyucu değiştirme. Aktif stüdyo oturumu genel tek-ayet tekrarıyla çakışmaz. Süreli uyku zamanlayıcısı oturumu durdurur; sure-sonu zamanlayıcısı stüdyo çalışması sırasında seçilemez.
+- Hatırlama modunda Arapça metin ve meal gizlenir. İpucu kaynak metnin ilk iki boşlukla ayrılmış kelimesidir. Metni açarak kontrol edebilirsin. Ayet metni değiştirilmez.
+- “Tekrar edeceğim” ve “Hazır hissediyorum” işaretleri kullanıcının öz değerlendirmesidir; ezber doğrulaması veya telaffuz puanı değildir. Mikrofon kullanılmaz. Sesli tekrarlar kendiliğinden işaret oluşturmaz.
+- Tekrar listesi, çalışma aralığındaki durum göstergeleri ve ayet çalışma ekranından tek ayetlik stüdyoya geçiş.
+- `nur-studio` tercihleri ve `nur-studio-marks` kişisel işaretleri yalnızca cihazda tutulur. İşaretler yedeğe dahildir; içe aktarmada mevcut aynı-ayet işareti korunur. Oturum çalışır halde yedeklenmez ve sayfa yeniden yüklenince otomatik ses başlatılmaz.
+- Çevrimdışı içerik önceden hazırlanmışsa metni gizleme/açma, ipucu, kişisel değerlendirme ve tekrar listesi internetsiz kullanılabilir. Sesli tekrar internet gerektirir.
+- Destekleyen kurulu PWA ortamlarında Oku / Dinle / Ezber / Planım uygulama kısayolları.
+
+Test: `node test-v7.mjs`. İki ayet × üç tekrar × üç tur = 18 oynatma sırası, sonlandırma, otomatik değerlendirme yapılmaması, hatırlama modu, kaynakla eşleşen ipucu, zamanlayıcı, okuyucu değişimi, yedek geri yükleme, mobil düzen ve çevrimdışı çalışma kontrol edilir. Ses, otomatik testte yerel WAV yanıtıyla taklit edilir; ayrıca gerçek CDN ile iki ayetlik döngünün tamamlanıp durduğu doğrulanmıştır.
