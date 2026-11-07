@@ -159,3 +159,15 @@ Testler: `node test-v8.mjs` atlas veri/filtre/favori/bağlantı/çevrimdışı d
 - Ayarlar mevcut dışa aktarma yedeğinde yer alır; içe aktarırken cihazdaki görünüm tercihleri değişmez.
 - Metinler değiştirilmez; görünmeyen dil CSS display:none ile ekran okuyucularından da gizlenir. Metin boyutu/görünümü değiştirilirken görünür ayetin ekran konumu korunmaya çalışılır; URL'de yeni gezinme kaydı oluşturulmaz.
 - `node test-v13.mjs`: kaynağa eşit önizleme, üç görünüm, bağımsız boyutlar, yeniden yükleme ve kayıtlı ayetlerde kalıcılık, eski tercihler ve geçersiz değerlerden toparlanma. V2–V12 regresyonları ve Pages çevrimdışı testleri de geçti.
+
+## v14: Keşfet artık konu odaklı bir okuma akışı
+
+- Keşfet başlangıcında normal sure okuması ile konu odaklı keşif ayrımı. Atlas artık ana giriş değil, sayfanın aşağısında ikincil seçenektir.
+- Altı editoryal rota, 19 ayet durağı: huzur, umut, şükür, iyilik, ilim ve adalet. Mevcut konu referansları değiştirilmedi. Ana sayfadaki küçük konu listesi korunur; Keşfet kartları ise rehberli akışı açar.
+- `#kesif/umut/1` biçiminde paylaşılabilir/yüklenebilir bağlantılar; durak seçici, önceki/sonraki, tam sure ve ayet çalışması bağlantıları.
+- Her durakta kaynak Diyanet meali, açılabilir Arapça metin, kaynakla aynı önceki/sonraki ayet mealleri ve isteğe bağlı düşünme sorusu. Sorular açıkça editoryal olarak etiketlenir; ayet/meal/tefsir değildir. Komşu ayet penceresinin tam bağlam veya tefsirin yerine geçmediği açıklanır.
+- Kişisel notlar mevcut `nur-notes` ve yer imleri `nur-saved` ile ortaktır; mevcut yedek sistemine dahildir. Kullanıcı girişi HTML olarak çalıştırılmaz.
+- `nur-discovery-last` yalnızca son ziyaret edilen konu/durak gezinme tercihidir, yedeğe dahil değildir. Otomatik okundu veya tamamlanma puanı üretilmez.
+- Mobilde sıralama: ayet, komşu ayetler, düşünme/not alanı, sonraki durak. Seçili durak yatay listede görünür tutulur.
+- `node test-v14.mjs`: 19 ayetin/komşu ayetlerin kaynakla birebir eşleşmesi; altı rota, not/yer imi, paylaşılan not defteri, doğrudan URL/geri, son rota, 320–1024px ve çevrimdışı okuma/not kaydı. V2–V13 regresyonları ve Pages alt dizin testi de geçti.
+- Ayet çalışması, okuyucunun tek-dil tercihinden bağımsız olarak iki metni göstermeye devam eder.
