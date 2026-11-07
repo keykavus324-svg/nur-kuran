@@ -171,3 +171,18 @@ Testler: `node test-v8.mjs` atlas veri/filtre/favori/bağlantı/çevrimdışı d
 - Mobilde sıralama: ayet, komşu ayetler, düşünme/not alanı, sonraki durak. Seçili durak yatay listede görünür tutulur.
 - `node test-v14.mjs`: 19 ayetin/komşu ayetlerin kaynakla birebir eşleşmesi; altı rota, not/yer imi, paylaşılan not defteri, doğrudan URL/geri, son rota, 320–1024px ve çevrimdışı okuma/not kaydı. V2–V13 regresyonları ve Pages alt dizin testi de geçti.
 - Ayet çalışması, okuyucunun tek-dil tercihinden bağımsız olarak iki metni göstermeye devam eder.
+
+## v15: Anlam Evreni
+
+- Keşfet girişinde altı büyük, adlandırılmış kavramdan oluşan etkileşimli sahne. Hafif WebP atmosfer görseli (yaklaşık 105KB, yapay zekâ üretimi), yavaş yörüngeler, ışık izleri ve fareyle sınırlı paralaks. Kalabalık sure noktaları yerine altı kavram seçimi.
+- Seçili kavramın ayet penceresinde 19 kaynak mealin tamamı, önceki/sonraki, kaynak sure/ayet, tam sure ve rehberli rota bağlantıları. “Buradan dinle” ortak oynatıcıyı yalnızca kullanıcının isteğiyle başlatır; normal oynatıcının devam davranışı korunur.
+- Diğer kavramlara editoryal geçişler ve son beş kavramlık oturum içi keşif izi. Bağlantılar metinler arası kanıt/tefsir iddiası değildir; açıkça belirtilir.
+- Klavye okları/Home/End ile kavram seçimi, canlı durum bildirimi, 44px ve üzeri kavram hedefleri, mobil ayet penceresine atlama.
+- Hareket durdurma tercihi `nur-cosmos-paused` içinde yereldir, yedeğe dahil değildir. Sistem hareket azaltma tercihi önceliklidir. Otomatik ses yoktur. Önceden hazırlanırsa sahne ve görsel çevrimdışı çalışır.
+- `test-v15.mjs`: altı kavram, 19 kaynağa eşit meal, yönler/iz, klavye, hareket tercihi, 320–1440px çakışmayan kavramlar, kullanıcıyla başlayan taklit ses ve çevrimdışı sahne/görsel. V2–V14 regresyonları da geçti.
+
+### Sürüm güncellemesi ve eski önbellek
+
+Pages derlemesi HTML'de ve çevrimdışı listesinde içerik sürümüne göre adlandırılmış JS/CSS dosyaları kullanır. Sabit dosyalar uyumluluk için korunur. Böylece daha eski cache-first service worker, çevrimiçi yenilemede yeni giriş dosyalarını eski içerikle değiştiremez. Mevcut service worker kaydı varsa uygulama güncelleme kontrolü de yapar; yeni kullanıcıda kendiliğinden çevrimdışı kayıt oluşturulmaz. Kişisel localStorage verileri silinmez.
+
+`node test-update.mjs` eski app.js döndüren kurulu bir service worker üzerinden yeni sürüme çevrimiçi yenilemeyi doğrular. `node test-pages.mjs` sürümlenmiş dosyalarla Pages alt dizin ve çevrimdışı yeniden yüklemeyi doğrular.

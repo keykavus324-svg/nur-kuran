@@ -32,7 +32,14 @@ await cp('public','dist',{recursive:true});
 for(const file of ['app.js','style.css','fonts.css','sw.js']){
  await writeFile(path.join('dist',file),adapt(await readFile(path.join('public',file),'utf8')));
 }
-const html=adapt(await readFile('index.html','utf8'));
+// Fingerprinted entry assets bypass older cache-first service workers on an online navigation.
+const revision=cacheName.slice(-12);
+const entries=['app.js','style.css','fonts.css'];
+const entryNames=Object.fromEntries(entries.map(file=>{const ext=path.extname(file);return [file,file.slice(0,-ext.length)+'.'+revision+ext]}));
+for(const file of entries)await cp(path.join('dist',file),path.join('dist',entryNames[file]));
+const versionEntries=text=>entries.reduce((value,file)=>value.split(base+file).join(base+entryNames[file]),text);
+await writeFile('dist/sw.js',versionEntries(await readFile('dist/sw.js','utf8')));
+const html=versionEntries(adapt(await readFile('index.html','utf8')));
 await writeFile('dist/index.html',html);
 await writeFile('dist/offline-shell.json',JSON.stringify({html}));
 const manifest=JSON.parse(await readFile('public/manifest.webmanifest','utf8'));
