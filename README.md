@@ -20,7 +20,7 @@ Sunucu 0.0.0.0 adresine bağlanır; `.e2b.app` önizleme alan adlarına izin ver
 - Günlük 5/10/20/30/50 ayet hedefi, son 7 günün grafiği
 - Açıkça “Okudum” işaretlenen benzersiz ayetlerden oluşan günlük ilerleme; sayfayı görüntülemek okundu sayılmaz
 - JSON yedek indirme ve doğrulanmış yedeği mevcut kayıtlarla birleştirme
-- Alafasy tilaveti, otomatik sonraki ayet, konum çubuğu, hız ve geçerli ayeti sürekli tekrar
+- Alafasy, Husary ve Hudhaify tilavetleri; otomatik sonraki ayet, konum çubuğu, hız ve geçerli ayeti sürekli tekrar
 
 ## Veri ve gizlilik
 
@@ -74,3 +74,14 @@ Tam yayınlama adımları: [GITHUB-YAYINLAMA.md](GITHUB-YAYINLAMA.md).
 - Telefonda beş bölümlü alt menü, erişilebilir ayarlar ve odak moduyla uyumlu yerleşim.
 
 Test: `node test-v4.mjs`. Önceki testler alt menünün masaüstünde gizli olmasını dikkate alacak şekilde güncellenmiştir.
+
+
+## v5: Dinleme alanı
+
+- Özel dinleme ekranı: 114 sure ve başlangıç ayeti seçimi, üç okuyucu, etkin ayetin Arapça metni ve Türkçe meali, hızlı sure kartları.
+- Okuyucular: `ar.alafasy`, `ar.husary`, `ar.hudhaify`. Sesler harici Islamic Network CDN üzerinden yüklenir. İlk ayetler gerçek tarayıcıda çözümlenip oynatılarak kontrol edildi; harici kaynakların her zaman erişilebilir olması garanti edilemez.
+- Hız, ses düzeyi ve okuyucu tercihi cihazda tutulur. Son dinlenen ayet, okuma konumundan ayrı saklanır. Dinleme ayarları kişisel not yedeğinin parçası değildir.
+- 10 / 20 / 30 / 60 dakika sonra veya sure sonunda duraklatma. Zamanlayıcı yalnızca açık oturum içindir; yeniden yüklemede sıfırlanır. Tarayıcı/cihaz uyku durumunda gecikme olabilir. Ayet tekrarı ve sure sonunda durma birbiriyle çakışmayacak şekilde yönetilir.
+- Günün ayeti: 12 referanslık editoryal seçki, cihazın yerel takvim gününe göre dönüşümlü gösterilir. Arapça metin ve meal mevcut yerel veri dosyalarından aynen alınır.
+
+Test: `node test-v5.mjs`. Okuyucu değiştirme, duraklatılmış halde değiştirme, tercih kalıcılığı, saat ilerleterek zamanlayıcı, sure sonunda durma, mobil yerleşim ve gün değişiminde kaynak metni doğrulanır. Otomatik testte ses yanıtları taklit edilir; gerçek CDN oynatma kontrolü ayrıca yapılmıştır.
