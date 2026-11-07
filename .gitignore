@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.cache/
+.npm/
+.env
+.env.*
+*.log
+*backup.json
+screenshot.png
+v2-*.png
+v3-*.png
+app-before-v2.txt
+enhancements.js
+features-v3.js
+font.css
+*.zip

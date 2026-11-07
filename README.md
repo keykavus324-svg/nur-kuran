@@ -1,2 +1,66 @@
-# nur-kuran
-Nûr — Kur’an-ı Kerim: 114 sure, Türkçe meal, tilavet, kişisel notlar ve çevrimdışı okuma.
+# Nûr — Kur’an-ı Kerim
+
+Türkçe arayüz, yerel Osmanî Arapça metin ve Diyanet Türkçe meal dosyaları ile 114 sure ve 6.236 numaralı ayet.
+
+## Çalıştırma
+
+```sh
+npm ci
+npm run dev -- --port 5173 --strictPort
+```
+
+Sunucu 0.0.0.0 adresine bağlanır; `.e2b.app` önizleme alan adlarına izin verir.
+
+## Özellikler
+
+- Sure, cüz, Türkçe meal ve ayet numarası araması (ör. 2:255)
+- Yer imleri, kaldığın yer, gece görünümü ve Arapça yazı boyutu
+- Konulu okuma önerileri ve yeni okuyuculara giriş
+- Odak modu (Escape ile çıkış), ayete hızlı geçiş
+- Günlük 5/10/20/30/50 ayet hedefi, son 7 günün grafiği
+- Açıkça “Okudum” işaretlenen benzersiz ayetlerden oluşan günlük ilerleme; sayfayı görüntülemek okundu sayılmaz
+- JSON yedek indirme ve doğrulanmış yedeği mevcut kayıtlarla birleştirme
+- Alafasy tilaveti, otomatik sonraki ayet, konum çubuğu, hız ve geçerli ayeti sürekli tekrar
+
+## Veri ve gizlilik
+
+Arapça: AlQuran Cloud `quran-uthmani`; meal: `tr.diyanet`. Metinler `public/data` içinde yereldir. Sesler `cdn.islamic.network` üzerinden internet bağlantısıyla yüklenir. Çevrimdışı okuma isteğe bağlıdır: sağ üstteki bulut simgesinden veya ayarlardan “Çevrimdışı okumayı hazırla” seçilir. Başarılı indirmeden sonra uygulama kabuğu, metinler, fontlar ve arama çevrimdışı kullanılabilir. Ses dosyaları önbelleğe alınmaz. Manifest ve uygulama simgeleri destekleyen tarayıcılarda ana ekrana yüklemeye uygundur; kurulum tarayıcıya ve önizleme çerçevesinin izinlerine bağlıdır. Kişisel veriler yalnızca tarayıcının localStorage alanında saklanır; hesap ve bulut senkronizasyonu yoktur. Yedek içe aktarımında görünüm tercihleri korunur, günlük hedef ve son okuma konumu yedekten alınır.
+
+## Test
+
+```sh
+npx playwright install --with-deps chromium
+node test-v2.mjs
+```
+
+Testler: okuma hedefleri, işaretleme, odak modu, ayete geçiş, yer imleri, yedekleme/geri yükleme, arama, 114 sure/30 cüz, mobil taşma kontrolü. Ses kontrolleri yerel oluşturulmuş WAV yanıtı ile test edilir; bu, dış ses servisinin erişilebilirliğini garanti etmez.
+
+Ana kaynaklar: `public/app.js`, `public/style.css`, `index.html`.
+
+
+## v3: Notlar, bağlantılar ve çevrimdışı kullanım
+
+- Ayetlerin kalem düğmesiyle 2.000 karaktere kadar kişisel not ekle/düzenle/sil. Notlar metin ve mealden ayrı etiketlenir; “Kaydettiklerim” ekranında bir not defterinde toplanır.
+- Yedekler notları da içerir. Eski notsuz v1 yedekleri hâlâ kabul edilir. İçe aktarmada aynı ayetteki mevcut not korunur.
+- `/#ayet/94/5` gibi bağlantılar doğrudan ilgili ayete açılır. Geri/ileri gezinme desteklenir.
+- Service worker yalnızca kullanıcı çevrimdışı hazırlığı başlatınca kaydedilir. Önbellek hazırlığı tamamlanmadan “hazır” durumu gösterilmez.
+- `public/offline-shell.json` temiz HTML kabuğunu içerir; geliştirme sunucusunun bağlantı gerektiren HMR istemcisi çevrimdışı kabuğa dahil edilmez.
+- Tarayıcı verileri silinirse kişisel kayıtlar ve çevrimdışı içerik kaybolabilir. Bu, bulut yedekleme değildir.
+
+### Çevrimdışı test
+
+```sh
+node test-v3.mjs
+```
+
+Gerçek service worker kurulumundan sonra tarayıcı bağlamı çevrimdışı yapılır ve sayfa yeniden yüklenir. 114 sure, Nâs suresinin 6 ayeti, Bakara suresinin 286 ayeti, ayet araması, notlar ve notlu yedekleme doğrulanır. Metin kaçışları, doğrudan bağlantılar ve geri gezinme de test edilir. İşletim sisteminin gerçek kurulum diyaloğu otomatik test edilmez.
+
+### Geliştirici notu
+
+Önbelleklenen dosyalar değiştirildiğinde `public/sw.js` içindeki sürüm adını ve `offlineReady()` içindeki eşleşen sürümü artırın. Yeni indirme başarılı olunca önceki Nûr önbelleği temizlenir. `index.html` değiştiğinde `offline-shell.json` kabuğunu da aynı HTML ile güncelleyin. HTTPS (veya localhost) gerekir.
+
+## GitHub Pages
+
+Tam yayınlama adımları: [GITHUB-YAYINLAMA.md](GITHUB-YAYINLAMA.md).
+
+`.github/workflows/pages.yml`, `main` dalına push yapıldığında GitHub Pages'e dağıtır. Repository ayarlarında Pages kaynağı GitHub Actions olmalıdır. Kişisel erişim anahtarı gerekmez; workflow GitHub'ın sınırlı izinli geçici kimliğini kullanır. `npm run build` bağımsız statik dosyaları `dist/` klasörüne hazırlar; Pages alt yolu, manifest, paylaşım URL'leri ve service worker kapsamı derlemede uyarlanır.
