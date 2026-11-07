@@ -44,3 +44,6 @@ polish-v11.py
 v12-*.png
 mobile-before-*.png
 webkit-install.log
+
+v13-*.png
+reading-v13.py

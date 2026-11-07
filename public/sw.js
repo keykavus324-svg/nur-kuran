@@ -1,4 +1,4 @@
-const CACHE='nur-offline-v12';
+const CACHE='nur-offline-v13';
 const FILES=['/offline-shell.json','/app.js','/style.css','/fonts.css','/hero.png','/data/arabic.json','/data/turkish.json','/manifest.webmanifest','/icons/nur-192.png','/icons/nur-512.png',...Array.from({length:7},(_,i)=>`/fonts/font${i}.ttf`)];
 self.addEventListener('install',event=>{event.waitUntil((async()=>{const cache=await caches.open(CACHE);try{await cache.addAll(FILES);await self.skipWaiting()}catch(e){await caches.delete(CACHE);throw e}})())});
 self.addEventListener('activate',event=>{event.waitUntil((async()=>{for(const key of await caches.keys())if(key.startsWith('nur-offline-')&&key!==CACHE)await caches.delete(key);await self.clients.claim()})())});

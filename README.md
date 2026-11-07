@@ -150,3 +150,12 @@ Testler: `node test-v8.mjs` atlas veri/filtre/favori/bağlantı/çevrimdışı d
 - 320px'de sure listesi taşması giderildi. Azaltılmış hareket tercihinde ayete geçiş animasyonsuzdur.
 - `node test-v12.mjs`: 9 ekranı 320/390/430/768px ve 844×390 yatay görünümde, dokunma hedeflerini, yazı boyutlarını, ayarlar panelini, odak modunu ve 320px ses oynatıcısını kontrol eder. Ses WAV ile taklit edilir.
 - V2–V11 regresyonları ve Pages alt dizin/çevrimdışı testleri geçti. Ek olarak WebKit iPhone 13 emülasyonunda yedi ekran ve ayarlar paneli kontrol edildi; fiziksel cihaz testi değildir.
+
+## v13: Kişisel okuma görünümü
+
+- Görünüm ve Ayarlar panelinde Arapça + meal, yalnızca Arapça ve yalnızca Türkçe meal seçenekleri. Ayarlar sure, kayıtlı ayet ve plan bölümü okuma kartlarında uygulanır; çalışma ve ezber ekranlarının görünümü değiştirilmez.
+- Arapça 26/32/40/48px, Türkçe meal 14/16/18/20/22px. Kaynaktan aynen alınan Fâtiha 1 ile canlı önizleme.
+- Tercihler `nur-settings` içindeki `arabic`, `meal`, `size` ve `mealSize` alanlarında saklanır. Eski `meal:false` tercihi korunur; geçersiz boyutlar varsayılana döner. İki metnin birden gizlenmesi engellenir.
+- Ayarlar mevcut dışa aktarma yedeğinde yer alır; içe aktarırken cihazdaki görünüm tercihleri değişmez.
+- Metinler değiştirilmez; görünmeyen dil CSS display:none ile ekran okuyucularından da gizlenir. Metin boyutu/görünümü değiştirilirken görünür ayetin ekran konumu korunmaya çalışılır; URL'de yeni gezinme kaydı oluşturulmaz.
+- `node test-v13.mjs`: kaynağa eşit önizleme, üç görünüm, bağımsız boyutlar, yeniden yükleme ve kayıtlı ayetlerde kalıcılık, eski tercihler ve geçersiz değerlerden toparlanma. V2–V12 regresyonları ve Pages çevrimdışı testleri de geçti.
