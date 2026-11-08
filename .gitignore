@@ -74,3 +74,7 @@ research/*digest.json
 research/extracted-equations.json
 research/v17-validation.json
 research/v18-validation.json
+
+v19-*.png
+lens-v19.js
+research/v19-validation.json

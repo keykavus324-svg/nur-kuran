@@ -13,7 +13,7 @@ for(const width of [320,390,430,768,844]){
 await p.setViewportSize({width:390,height:844});await p.goto('http://localhost:5173/#ayet/1/1');await p.waitForSelector('.verse');
 assert.equal(await p.locator('.verse-translation').first().evaluate(e=>getComputedStyle(e).fontSize),'16px');
 assert.equal(await p.locator('#jump-ayah').evaluate(e=>getComputedStyle(e).fontSize),'16px');
-for(const box of await p.locator('.verse-actions .icon-button').evaluateAll(es=>es.map(e=>({w:e.getBoundingClientRect().width,h:e.getBoundingClientRect().height}))))assert(box.w>=44&&box.h>=44);
+for(const box of await p.locator('.verse-actions .icon-button').evaluateAll(es=>es.map(e=>({w:e.getBoundingClientRect().width,h:e.getBoundingClientRect().height,cw:parseFloat(getComputedStyle(e).width),ch:parseFloat(getComputedStyle(e).height)}))))assert(box.cw>=44&&box.ch>=44&&box.w+0.001>=44&&box.h+0.001>=44); // Chromium transform float precision: 44px can measure 43.9998779px.
 await p.locator('#reader-settings').click();await p.waitForSelector('.dialog');const dialog=await p.locator('.dialog').boundingBox();assert(dialog.x>=0&&dialog.x+dialog.width<=390&&dialog.y>=0&&dialog.y+dialog.height<=845);assert.equal(await p.evaluate(()=>getComputedStyle(document.body).overflow),'hidden');await p.click('#close-modal');
 await p.click('#focus-toggle');assert(await p.locator('.mobile-navigation').isHidden());await p.click('#focus-toggle');assert(await p.locator('.mobile-navigation').isVisible());
 await p.emulateMedia({reducedMotion:'reduce'});await p.fill('#jump-ayah','7');await p.click('#jump-form button');assert(p.url().endsWith('/1/7'));

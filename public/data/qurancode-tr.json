@@ -658,7 +658,11 @@
           ],
           "expected": 309,
           "operator": "add",
-          "unit": "sıra"
+          "unit": "sıra",
+          "sourceEras": [
+            "",
+            ""
+          ]
         }
       ],
       "counts": [],
@@ -766,7 +770,11 @@
           ],
           "expected": 6117,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -806,7 +814,15 @@
           ],
           "expected": 6117,
           "operator": "add",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
         }
       ],
       "counts": [
@@ -980,7 +996,11 @@
           ],
           "expected": 6610,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            ""
+          ]
         }
       ],
       "counts": [],
@@ -1007,7 +1027,11 @@
           ],
           "expected": 226,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -1042,7 +1066,11 @@
           ],
           "expected": 6566,
           "operator": "add",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            ""
+          ]
         }
       ],
       "counts": [],
@@ -1069,7 +1097,11 @@
           ],
           "expected": 1044,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [],
@@ -1096,7 +1128,11 @@
           ],
           "expected": 950,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "",
+            ""
+          ]
         },
         {
           "label": "Yazarın yaş yorumu ile tarih hesabı",
@@ -1106,7 +1142,11 @@
           ],
           "expected": 5434,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            ""
+          ]
         }
       ],
       "counts": [],
@@ -1157,7 +1197,11 @@
           ],
           "expected": 3747,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -1189,7 +1233,11 @@
           ],
           "expected": 3198,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -1427,7 +1475,11 @@
           ],
           "expected": 4560,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            ""
+          ]
         }
       ],
       "counts": [],
@@ -1454,7 +1506,11 @@
           ],
           "expected": 3050,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -1486,7 +1542,11 @@
           ],
           "expected": 4214,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -1523,7 +1583,11 @@
           ],
           "expected": 2627,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -1556,7 +1620,11 @@
           ],
           "expected": 3761,
           "operator": "add",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            ""
+          ]
         }
       ],
       "counts": [
@@ -1590,7 +1658,11 @@
           ],
           "expected": 1274,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "",
+            ""
+          ]
         }
       ],
       "counts": [
@@ -1638,7 +1710,11 @@
           ],
           "expected": 3118,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            ""
+          ]
         }
       ],
       "counts": [
@@ -1678,7 +1754,11 @@
           ],
           "expected": 1625,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [],
@@ -1710,7 +1790,11 @@
           ],
           "expected": 3088,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            ""
+          ]
         }
       ],
       "counts": [],
@@ -1737,7 +1821,11 @@
           ],
           "expected": 258,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -1778,7 +1866,11 @@
           ],
           "expected": 2965,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            ""
+          ]
         }
       ],
       "counts": [
@@ -1810,7 +1902,11 @@
           ],
           "expected": 135,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -1851,7 +1947,11 @@
           ],
           "expected": 137,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -1895,7 +1995,14 @@
           ],
           "expected": 796,
           "operator": "add",
-          "unit": "tekrar"
+          "unit": "tekrar",
+          "sourceEras": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
         },
         {
           "label": "Önerilen Hûd doğum ve ölüm farkı",
@@ -1905,7 +2012,11 @@
           ],
           "expected": 796,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -1976,7 +2087,11 @@
           ],
           "expected": 2389,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -2008,7 +2123,11 @@
           ],
           "expected": 1422,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -2040,7 +2159,11 @@
           ],
           "expected": 1224,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -2075,7 +2198,11 @@
           ],
           "expected": 1197,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -2114,7 +2241,11 @@
           ],
           "expected": 1074,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -2146,7 +2277,11 @@
           ],
           "expected": 1169,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -2179,7 +2314,11 @@
           ],
           "expected": 347,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [
@@ -2211,7 +2350,11 @@
           ],
           "expected": 1888,
           "operator": "subtract",
-          "unit": "yıl"
+          "unit": "yıl",
+          "sourceEras": [
+            "MÖ",
+            "MÖ"
+          ]
         }
       ],
       "counts": [

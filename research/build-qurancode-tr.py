@@ -57,6 +57,23 @@ add('irem-yerlesim','İrem için önerilen yerler ve tarih çerçevesi',[27,28],
 add('punt-mekke','Punt–Mekke görüşü ve bölümün diğer sayıları',[28,29,30], 'Kitap, Punt ile Mısır arasındaki ticareti MÖ 26. yüzyıl ve 4. Hanedan bağlamında anıp kuzeyden dolaşan kara yolculuğu için 120 gün verir. Yazar Punt’u Mekke ile özdeşleştirmeyi; Kâbe’nin “Boniat/Boniat İbrahim” ve “Nather/Netjer” gibi adları arasında ilişki kurmayı önerir. Bakara 127 ve İbrahim 37’yi, yapının temellerinin İbrahim’den önce bulunmuş olabileceği yorumunda kullanır.',refs=[[2,127],[14,37]],notes=['120 gün bir yolculuk süresi olarak aktarılır; Kur’an harflerinden çıkarılmış yeni bir denklem değildir.','Yer adı benzerlikleri ve yapı tarihi yorumu burada doğrulanmış arkeolojik sonuç olarak sunulmaz.'],topic='context')
 chapters=[dict(id='method',title='Yöntem ve giriş',range=[8,13],ready=True),dict(id='c1',title='I. Bölüm · Âdem’den Hûd’a',range=[14,30],ready=True),dict(id='c2',title='II. Bölüm · Sâlih’ten İbrahim’e',range=[31,63],ready=False),dict(id='c3',title='III. Bölüm · İsmail’den Hatşepsut’a',range=[64,113],ready=False),dict(id='c4',title='IV. Bölüm · Harun’dan Davud’a',range=[114,181],ready=False),dict(id='c5',title='V. Bölüm · Süleyman’dan Muhammed’e',range=[182,225],ready=False),dict(id='conclusion',title='Sonuç',range=[226,227],ready=False),dict(id='appendix',title='Ek A',range=[228,231],ready=False),dict(id='glossary',title='Sözlük',range=[232,248],ready=False)]
 timeline=[['Âdem’in yaratılışı',7610],['Âdem’in ölümü',6610],['Nuh’un doğumu',6384],['Nuh tufanı',5434],['Nuh’un ölümü',4560],['Hûd’un doğumu',3761],['Hûd’un olası Kâbe yapımı',3118],['Âd’ın helâki',3088],['Hûd’un ölümü',2965]]
+# Explicit date-vs-duration annotations for the original chapter I equations.
+# M = BC date; _ = a duration/count, never interpreted as a calendar date.
+legacy_dates={
+ 'giris-kehf':['__'],'adem-bakara':['MM'],'adem-alti-aralik':['______'],
+ 'adem-olum':['M_'],'nuh-dogum':['MM'],'lamek-dogum':['M_'],
+ 'lamek-1044':['MM'],'tufan-950':['__','M_'],'tufan-nisa':['MM'],
+ 'tufan-lam':['MM'],'nuh-olum':['M_'],'nuh-enam':['MM'],'nuh-uzeyir':['MM'],
+ 'nuh-ahkaf':['MM'],'hud-dogum':['M_'],'hud-ahkaf-hac':['__'],
+ 'hud-kabe':['M_'],'hud-1625':['MM'],'ad-673':['M_'],'ad-hakka':['MM'],
+ 'hud-olum':['M_'],'hud-taha':['MM'],'hud-idris':['MM'],
+ 'hud-796':['_____','MM'],'hud-muhammed':['MM'],'ad-necm':['MM'],
+ 'hud-yunus':['MM'],'ad-rum':['MM'],'hud-tahrim':['MM'],
+ 'ad-enbiya':['MM'],'hud-hucurat':['MM'],'ad-aliimran':['MM']}
+for item in items:
+ for step,code in zip(item['steps'],legacy_dates.get(item['id'],[])):
+  assert len(step['operands'])==len(code)
+  step['sourceEras']=['MÖ' if c=='M' else '' for c in code]
 data=dict(version=1,title='Historical Quran Code',author='Hisham Amin Almasri',isbn='978-9957-67-214-0',year=2019,pages=248,coverage='Giriş ve I. bölüm: PDF 8–30. Diğer bölümlerin tam Türkçe incelemesi henüz hazır değildir.',chapters=chapters,timeline=timeline,items=items)
 pathlib.Path('public/data/qurancode-tr.json').write_text(json.dumps(data,ensure_ascii=False,indent=2))
 pathlib.Path('research/qurancode-progress.json').write_text(json.dumps(dict(completedPages=[8,30],nextPages=[31,63],reviewedItems=len(items),chapters=chapters,notes='İlk aşama: giriş ve I. bölümün sayısal savları Türkçe; kaynak iki tablo elle aktarıldı, toplamlar kontrol edildi. Tam kitap henüz tamamlanmadı.'),ensure_ascii=False,indent=2))

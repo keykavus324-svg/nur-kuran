@@ -242,3 +242,17 @@ V17'nin ilk dilimi genişletildi: **920 Türkçe kayıt, 752 işlem, 1107 sayım
 - `test-v17.mjs` ilk 44 kaydın regresyonlarını korur. Pages alt dizin ve eski cache-first service worker'dan güncelleme testleri yeni kataloğu da kapsar.
 
 V18 Pages derlemesi sayısal kitap JSON'unu da içerik parmak izli dosya adıyla yükler. Böylece eski service worker'ın 44 kayıtlı sabit JSON önbelleği yeni uygulamaya sızmaz. Güncelleme testi hem eski JS hem eski kitap JSON'u barındıran bir worker ile çalışır. Yerel not ve koleksiyonlar silinmez.
+
+## v19: İz Sürme Odası
+
+920 kayıtlık kaynak kataloğuna bağlanan yeni bir keşif deneyimi. Keşfet'te giriş kartı, masaüstü menüsü, sayısal katalog kısayolu ve işlem/sayım içeren kayıtlarda “Bu sayının izini sür” bağlantısı vardır.
+
+- `#mercek/zaman/1430`: kitabın önerdiği kronolojide bir olayı seç. Önceki/sonraki ve klavyeyle kullanılabilen 123 konumlu seçici. Aralıklar olay sırasını gösterir, yıl ölçeğinde değildir. MÖ değerler pozitif, MS değerler negatif URL değeriyle temsil edilir (`#mercek/zaman/-572`). “0” kitabın milat kabulüdür; standart tarihlemede yıl sıfırı olduğu iddia edilmez.
+- Tarih eşleştirmesi **yalnızca açık `sourceEras` etiketi bulunan girdi** üzerinden yapılır. Eski veya dönem etiketsiz işlemler otomatik olarak tarih sayılmaz. Tarihlerin doğrulanmış kronoloji olmadığı görünür biçimde belirtilir.
+- `#mercek/sayi/796`: sayının basılı sonuç veya iddia edilen sayım olarak geçtiği kayıtları bulur. Her kaynak kaydı bir kez listelenir; tekrarlanan kaynak iddiaları ayrı kalır. Bunun istatistiksel anlamlılık ya da bağımsız kanıt sayısı olmadığı açıklanır. Konu filtresi, 6 kayıtlık sayfalama, keyfî 0–1.000.000 tamsayı girişi ve anlamlı boş durum.
+- **Hesabın dört katmanı:** kaynak girdileri → işlem → basılı/yeniden hesaplanan sonuç → sayım ve tarih varsayımları. Toplama, çıkarma ve karma işlemler mevcut hesap motoruyla çalışır. Kaynak kaydına, düzenlenebilir hesaplayıcıya ve aynı sayının diğer kullanımlarına geçilir.
+- **Basım hatası örneği:** 1844 − 256 için kaynakta 1579, hesapta 1588. Hata gizlenmez; kaynak notu ve olası 265/256 karışıklığı mevcut ayrıntı kaydında korunur.
+- Geçersiz rotalar güvenli varsayılanlara çevrilir. Yavaş istek başka ekrana geçildikten sonra o ekranı değiştirmez. Otomatik ses, sürekli animasyon veya yeni izleme/depolama yoktur; kısa adım geçişi hareket azaltma tercihinde kapalıdır. Hazırlanmış içerikle çevrimdışı çalışır.
+- `node test-v19.mjs`: bağımsız kaynak eşleştirme hesabı, MÖ/MS, filtre/sayfalama, URL geri gezinme, klavye seçici, dört katman, gerçek hatalı işlem, kaynak/hesaplayıcı bağlantıları, boş/geçersiz girişler, 320–1440px, koyu tema, hareket azaltma ve çevrimdışı çalışma. Pages ve eski worker'dan güncelleme testlerine yeni oda da dahildir.
+
+I. bölümün eski 34 işlemi için tarih/süre ayrımı da kaynak açıklamalarına göre açıkça etiketlendi. Örneğin Âdem hesabındaki MÖ 7610 bir tarih, 1000 ise ömür süresidir; 1000 sayısı Davud'un yönetim tarihiyle otomatik bağlanmaz. Bunlar yeni tarih iddiaları değil, mevcut hesap girdilerinin tür bilgileridir.
