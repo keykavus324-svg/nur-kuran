@@ -18,17 +18,20 @@ const sourceFiles=[...await sourceTree('public'),'index.html','scripts/build-pag
 const version=createHash('sha256');
 for(const file of sourceFiles){version.update(file);version.update(await readFile(file));}
 const cacheName=prefix+version.digest('hex').slice(0,12);
+const bookAsset='data/qurancode-tr.'+cacheName.slice(-12)+'.json';
 function adapt(text){
  return text.replace(/(["'`])\/(?=[A-Za-z])/g,(_,q)=>q+base)
   .replace(/scope:\s*(["'])\/\1/g,(_,q)=>`scope:${q}${base}${q}`)
   .replace(/url\(\/(?!\/)/g,'url('+base)
   .replace('${location.origin}/#','${location.origin}'+base+'#')
   .replace(/nur-offline-v[0-9]+/g,cacheName)
-  .replace("key.startsWith('nur-offline-')",`key.startsWith('${prefix}')`);
+  .replace("key.startsWith('nur-offline-')",`key.startsWith('${prefix}')`)
+  .split(base+'data/qurancode-tr.json').join(base+bookAsset);
 }
 await rm('dist',{recursive:true,force:true});
 await mkdir('dist',{recursive:true});
 await cp('public','dist',{recursive:true});
+await cp('public/data/qurancode-tr.json',path.join('dist',bookAsset));
 for(const file of ['app.js','style.css','fonts.css','sw.js']){
  await writeFile(path.join('dist',file),adapt(await readFile(path.join('public',file),'utf8')));
 }

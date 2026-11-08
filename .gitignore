@@ -64,3 +64,13 @@ number-book-v17.js
 uploads/
 research/qurancode-pages.json
 research/qurancode-text.txt
+
+v18-*.png
+research/complete-book.py
+research/book-overviews.py
+research/extract-book-math.py
+research/patch-v18.py
+research/*digest.json
+research/extracted-equations.json
+research/v17-validation.json
+research/v18-validation.json

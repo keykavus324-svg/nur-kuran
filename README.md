@@ -216,3 +216,29 @@ Test: `node test-v16.mjs`. Masanın sınırı/kalıcılığı ve tam metni; kole
 - Sayım laboratuvarı yerel Osmanî metni kullanır: NFC, Arapça Unicode harfleri, işaret/hareke/uzatma temizliği, isteğe bağlı elif birleştirme ve Fâtiha dışında başlangıç besmelesini çıkarma. Baş/son boşluk ve BOM temizlenir. Tam kural arayüzde açıklanır. Yerel sonuç ile kitabın rakamı ayrı gösterilir; eşleşme veya fark tarihsel yorumu tek başına doğrulamaz/çürütmez. Kaynak tablolardaki değerler yerel olarak doğrulanmış sayımlar gibi etiketlenmez.
 - Önceden hazırlanan çevrimdışı pakete Türkçe veri dahildir; eski notlar, koleksiyonlar, Arapça kaynak ve Diyanet meali değişmez.
 - `node test-v17.mjs`: 44 ayrıntı ekranı, 34 işlem, 41 sayım tanımının çalışması, tablolar, arama/filtre/sayfalama, değiştirilebilir hesaplama, besmele anahtarı, tam sure bağlantısı, 320–1440px taşma ve çevrimdışı yeniden yükleme. Bu testler kitabın tarihsel iddialarını doğrulamaz.
+
+## v18: Bütün bölümlerin sayısal kataloğu
+
+V17'nin ilk dilimi genişletildi: **920 Türkçe kayıt, 752 işlem, 1107 sayım tanımı**, Ek A'nın **114 surenin tamamını** içeren ayet/kelime/harf/başlangıç harfi tablosu. Bunlar benzersiz “kanıt” sayıları değildir; kaynakta yinelenen eşitlikler sayfa bağlantısıyla korunur. Arapça Kur’an ve Diyanet meali değişmedi.
+
+### Kapsam ve yöntem
+- Giriş, I–V. bölümlerin sayısal savları, sonuç ve Ek A (PDF 8–231). Sayfa 232–247 ad/konu dizinidir; bu sayıların birer kaynak sayfası olduğu, yeni matematik savları olmadığı açıklanır. 248 ISBN sayfasıdır.
+- Bu, kitabın kelimesi kelimesine tam çevirisi değil; sayısal içeriklerinin Türkçe açıklama ve hesap kataloğudur. Yazarın tarihleri, kimlik özdeşleştirmeleri ve yıl-sayım ilişkileri bağımsız tarihsel gerçeklik olarak onaylanmaz.
+- Özgün ilk 44 kayıt korunur. Devam bölümlerindeki basılı eşitlikler kaynak metinden çıkarılıp Türkçe tarih/sayım açıklamalarıyla yapılandırıldı. Bölüm açıklamaları, denklem dışı sayı/sıra iddiaları ve alternatif hesaplar ayrıca eklendi.
+- 114 Ek A satırı ve başlangıç harfi değerleri kaynak tablodan aktarılmıştır; ayet toplamı 6236'dır. Bir değerin Ek A ile uyumu, yerel metin sayımının veya tarihsel yorumun doğrulanması değildir.
+- Kaynakta aritmetik uyuşmazlık bulunan dört denklem (PDF 56, 69, 193, 208) düzeltilip gizlenmez: basılı ve hesaplanan sonuç ayrı gösterilir. Ayrıca harf adı, sayı ve MÖ/MS etiketi çelişkileri not edilir. Standart MÖ/MS sisteminde yıl sıfırı bulunmadığı hatırlatılır.
+- `11 + 25 − 5 + 2` gibi karma işlemler desteklenir. PDF 141'deki `214/215`, bölme değil iki alternatif olarak işlenir. Sihirbazlar tablosu 59 kelime toplamıyla ayrı sunulur.
+
+### Gezinme
+- `#sayisal`: konu, bölüm, kayıt türü, arama ve sayfalama.
+- `#sayisal/ek-a`: 114 satırlı native tablo, sure adı/numarasıyla arama; satırdan o surenin yerel sayım laboratuvarına geçiş.
+- `#sayisal/konu-muhammed`, `#sayisal/konu-kehf`, `#sayisal/konu-isa`: Türkçe konu açıklamalarına doğrudan bağlantılar.
+- “Basılı işlem uyuşmazlıkları” yalnızca gerçekten tutmayan dört işlemi filtreler. İddiaların tamamının doğru olduğu anlamına gelen bir yeşil etiket kullanılmaz.
+- Bütün bölümlerin yazar kronolojisi, MÖ/MS ayrımıyla aynı menüde bulunur.
+
+### Veri üretimi ve test
+- `python research/build-qurancode-tr.py`: ilk dilim + `research/book-completion-records.json` Türkçe eki ile veri ve kapsam durumunu yeniden üretir. Kullanıcının PDF dosyası/ham İngilizce çıkarımı depoya gönderilmez.
+- `node test-v18.mjs`: her kaydın ayrıntı ekranı, bütün işlem etiketleri ve sayım tanımları, 114 kaynak satırı, bütün kayıtların sayfalama ile erişimi, bölüm/tür filtreleri, karma hesap, 320–1440px ve çevrimdışı tam kitap verisi kontrol edilir.
+- `test-v17.mjs` ilk 44 kaydın regresyonlarını korur. Pages alt dizin ve eski cache-first service worker'dan güncelleme testleri yeni kataloğu da kapsar.
+
+V18 Pages derlemesi sayısal kitap JSON'unu da içerik parmak izli dosya adıyla yükler. Böylece eski service worker'ın 44 kayıtlı sabit JSON önbelleği yeni uygulamaya sızmaz. Güncelleme testi hem eski JS hem eski kitap JSON'u barındıran bir worker ile çalışır. Yerel not ve koleksiyonlar silinmez.

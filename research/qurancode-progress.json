@@ -1,13 +1,14 @@
 {
   "completedPages": [
     8,
-    30
+    231
   ],
-  "nextPages": [
-    31,
-    63
+  "indexPages": [
+    232,
+    247
   ],
-  "reviewedItems": 44,
+  "nextPages": null,
+  "reviewedItems": 920,
   "chapters": [
     {
       "id": "method",
@@ -34,7 +35,7 @@
         31,
         63
       ],
-      "ready": false
+      "ready": true
     },
     {
       "id": "c3",
@@ -43,7 +44,7 @@
         64,
         113
       ],
-      "ready": false
+      "ready": true
     },
     {
       "id": "c4",
@@ -52,7 +53,7 @@
         114,
         181
       ],
-      "ready": false
+      "ready": true
     },
     {
       "id": "c5",
@@ -61,7 +62,7 @@
         182,
         225
       ],
-      "ready": false
+      "ready": true
     },
     {
       "id": "conclusion",
@@ -70,7 +71,7 @@
         226,
         227
       ],
-      "ready": false
+      "ready": true
     },
     {
       "id": "appendix",
@@ -79,17 +80,37 @@
         228,
         231
       ],
-      "ready": false
+      "ready": true
     },
     {
       "id": "glossary",
-      "title": "Sözlük",
+      "title": "Dizin · yeni sayısal sav içermez",
       "range": [
         232,
         248
       ],
-      "ready": false
+      "ready": true,
+      "note": "232–247 ad/konu dizini; 248 ISBN sayfasıdır. Dizin numaraları hesap değil sayfa başvurularıdır."
     }
   ],
-  "notes": "İlk aşama: giriş ve I. bölümün sayısal savları Türkçe; kaynak iki tablo elle aktarıldı, toplamlar kontrol edildi. Tam kitap henüz tamamlanmadı."
+  "notes": "I–V. bölümlerin sayısal içerikleri, giriş, sonuç ve 114 surelik Ek A. Tam kitabın kelimesi kelimesine çevirisi değil; sayısal savların Türkçe aktarımıdır.",
+  "audit": {
+    "printedEquationsAdded": 715,
+    "arithmeticMismatches": [
+      "hesap-56-89",
+      "hesap-69-150",
+      "hesap-193-572",
+      "hesap-208-632"
+    ],
+    "sourcePages": 248,
+    "claimRange": [
+      8,
+      231
+    ],
+    "indexRange": [
+      232,
+      247
+    ],
+    "scopeNote": "Bütün bölümler kapsanır. Aritmetik aktarım ve kaynak tablo kontrolü, tarihsel savların bağımsız doğrulaması değildir. İngilizce kitabın bire bir tam çevirisi değildir."
+  }
 }

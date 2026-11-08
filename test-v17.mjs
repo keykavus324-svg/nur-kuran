@@ -7,14 +7,14 @@ try{
  const ctx=await browser.newContext({viewport:{width:1440,height:1000}}),p=await ctx.newPage(),errors=[];
  p.on('pageerror',e=>errors.push(e.message));
  const go=async(id='')=>{await p.goto('http://localhost:5173/#sayisal'+(id?'/'+id:''));await p.waitForSelector(id?'.number-detail':'.number-book-page')};
- await go();assert.equal(await p.locator('[data-number-id]').count(),8);assert.equal(await p.locator('#number-results').textContent(),'44 kayıt');
- const ids=new Set();for(let i=0;i<6;i++){for(const id of await p.locator('[data-number-id]').evaluateAll(es=>es.map(e=>e.dataset.numberId)))ids.add(id);if(i<5)await p.click('#number-next')}
- assert.equal(ids.size,44);assert(await p.locator('#number-next').isDisabled());
+ await go();assert.equal(await p.locator('[data-number-id]').count(),8);assert.equal(await p.locator('#number-results').textContent(),data.items.length+' kayıt');
+ const ids=new Set();for(let i=0;i<Math.ceil(data.items.length/8);i++){for(const id of await p.locator('[data-number-id]').evaluateAll(es=>es.map(e=>e.dataset.numberId)))ids.add(id);if(i<Math.ceil(data.items.length/8)-1)await p.click('#number-next')}
+ assert.equal(ids.size,data.items.length);assert(await p.locator('#number-next').isDisabled());
  await p.fill('#number-search','1824');assert((await p.locator('#number-results').textContent())!=='0 kayıt');
  await p.fill('#number-search','<script>');assert.equal(await p.locator('#number-results').textContent(),'0 kayıt');
  await p.fill('#number-search','');await p.selectOption('#number-topic','hud');assert.equal(await p.locator('#number-results').textContent(),data.items.filter(x=>x.topic==='hud').length+' kayıt');
  // Visit every prepared record, execute every count specification and check every arithmetic badge.
- for(const item of data.items){await go(item.id);assert.equal(await p.locator('.number-detail h1').textContent(),item.title);assert.equal(await p.locator('.number-check').count(),item.steps.length);for(const text of await p.locator('.number-check').allTextContents())assert(text.includes('eşitlik doğru'));
+ for(const item of data.items.filter(x=>!x.batch)){await go(item.id);assert.equal(await p.locator('.number-detail h1').textContent(),item.title);assert.equal(await p.locator('.number-check').count(),item.steps.length);for(const text of await p.locator('.number-check').allTextContents())assert(text.includes('eşitlik doğru'));
   for(let i=0;i<item.counts.length;i++){await p.selectOption('#number-count-spec',String(i));const value=await p.locator('#number-count-output strong').last().textContent();assert(/^\d+$/.test(value));}
   if(item.table){assert.equal(await p.locator('tbody tr').count(),item.table.rows.length);assert.equal(await p.locator('tfoot td').first().textContent(),String(item.table.claimedTotal));}
  }
@@ -26,5 +26,5 @@ try{
  await p.setViewportSize({width:390,height:950});await go('hud-796');await p.evaluate(()=>document.body.classList.add('dark'));await p.waitForTimeout(650);await p.screenshot({path:'v17-mobile-detail.png'});
  await p.setViewportSize({width:1440,height:1000});await go();await p.evaluate(()=>document.body.classList.remove('dark'));await p.selectOption('#number-topic','all');await p.waitForTimeout(650);await p.screenshot({path:'v17-number-library.png'});
  await p.click('#connection-status');await p.click('#prepare-offline');await p.waitForFunction(()=>document.getElementById('prepare-offline')?.textContent.includes('içerik hazır'),{},{timeout:60000});await p.click('#close-modal');await ctx.setOffline(true);await p.reload();await p.waitForSelector('.number-book-page');await p.locator('[data-number-id]').first().click();await p.waitForSelector('.number-detail');assert.deepEqual(errors,[]);
- console.log('PASS V17: 44 records, all operations/count specifications, pagination/search/filter, calculator, besmele toggle, native full-surah links, 320–1440px, offline reload; no browser errors.');
+ console.log('PASS V17: original 44 records, their operations/count specifications, pagination/search/filter, calculator, besmele toggle, native full-surah links, 320–1440px, offline reload; no browser errors.');
 }finally{await browser.close()}
