@@ -54,3 +54,7 @@ discovery-v14.js
 v15-*.png
 cosmos-v15.js
 chromium-download.log
+
+v16-*.png
+v16-backup-test.json
+workbench-v16.js

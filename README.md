@@ -186,3 +186,22 @@ Testler: `node test-v8.mjs` atlas veri/filtre/favori/bağlantı/çevrimdışı d
 Pages derlemesi HTML'de ve çevrimdışı listesinde içerik sürümüne göre adlandırılmış JS/CSS dosyaları kullanır. Sabit dosyalar uyumluluk için korunur. Böylece daha eski cache-first service worker, çevrimiçi yenilemede yeni giriş dosyalarını eski içerikle değiştiremez. Mevcut service worker kaydı varsa uygulama güncelleme kontrolü de yapar; yeni kullanıcıda kendiliğinden çevrimdışı kayıt oluşturulmaz. Kişisel localStorage verileri silinmez.
 
 `node test-update.mjs` eski app.js döndüren kurulu bir service worker üzerinden yeni sürüme çevrimiçi yenilemeyi doğrular. `node test-pages.mjs` sürümlenmiş dosyalarla Pages alt dizin ve çevrimdışı yeniden yüklemeyi doğrular.
+
+## v16: Ayet Atölyesi — üç birbirine bağlı araç
+
+### Karşılaştırma masası
+- `#atolye/masa`: en fazla üç ayetin Arapça metnini ve tam Diyanet mealini birlikte inceleme. Masa `nur-compare` altında yerel gezinme tercihi olarak tutulur, yedeğe dahil değildir.
+- Ortak kelime vurgusu büyük/küçük harf ve aksan farklarını normalleştirir, dört ve daha fazla harfli sözcükleri karşılaştırır; kök/semantik analiz ya da tefsir değildir. Vurgulama kaynak metni değiştirmez.
+
+### Kişisel koleksiyonlar
+- `#atolye/koleksiyonlar`: adlandırılmış seçkiler; oluşturma, ad değiştirme, ayet ekleme/çıkarma, yukarı/aşağı sıralama ve onaylı silme. Koleksiyonun silinmesi yer imi/notları silmez.
+- `nur-collections`: `{id,name,refs}` kayıtları; en fazla 50 koleksiyon, 60 karakterlik ad ve koleksiyon başına 200 ayet. Aynı ayet tekrar eklenmez.
+- Yedek dışa aktarmaya dahildir. İçe aktarım mevcut koleksiyonlarla kimliğe göre birleşir, mevcut ad korunur, ayetler tekilleştirilir. Eski yedekler koleksiyonları değiştirmez. Geçersiz referanslar ve birleşimde limit aşımı veri değiştirilmeden reddedilir.
+
+### Ayet kartı stüdyosu
+- `#atolye/kart/94/5`: Adaçayı, Gece ve Kâğıt temaları; kare/hikâye biçimleri; Arapça, Türkçe veya ikisi birlikte. PNG dosyası cihazda Canvas ile üretilir; kaynak metin düzenlenmez/kısaltılmaz ve referans görselde korunur.
+- Boyut 1080×1080 veya 1080×1920'den başlar; uzun ayetlerin tümünü göstermek için yükseklik uzar. 12000px yüksekliği aşan içerikte eksik görsel indirilmez, hata gösterilir. Yerel Amiri/Manrope yazı tipleri beklenir.
+- Keşfet/Kaydettiklerim girişleri, masaüstü menüsü ve her ayetin “Masa · Koleksiyon · Kart” düğmesiyle erişilir.
+- Hazırlanmış çevrimdışı içerikle üç araç ve PNG üretimi internetsiz kullanılabilir.
+
+Test: `node test-v16.mjs`. Masanın sınırı/kalıcılığı ve tam metni; koleksiyon kaçışları, tekilleştirme, sıralama, ad değiştirme, silme onayı, yedek geri yükleme/birleştirme, geçersiz/sınır aşan dosyalarda veri koruma; gerçek PNG imzası/boyutları; Bakara 282'nin Arapça ve Türkçe kelimelerinin tamamının çizilmesi; 320–768px ve çevrimdışı çalışma doğrulanır. V2–V15 regresyonları, Pages alt dizin ve eski service worker'dan güncelleme testleri geçti. WebKit iPhone 13 emülasyonunda üç ekran ve PNG indirme de kontrol edildi; fiziksel cihaz testi değildir.
