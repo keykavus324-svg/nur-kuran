@@ -256,3 +256,13 @@ V18 Pages derlemesi sayısal kitap JSON'unu da içerik parmak izli dosya adıyla
 - `node test-v19.mjs`: bağımsız kaynak eşleştirme hesabı, MÖ/MS, filtre/sayfalama, URL geri gezinme, klavye seçici, dört katman, gerçek hatalı işlem, kaynak/hesaplayıcı bağlantıları, boş/geçersiz girişler, 320–1440px, koyu tema, hareket azaltma ve çevrimdışı çalışma. Pages ve eski worker'dan güncelleme testlerine yeni oda da dahildir.
 
 I. bölümün eski 34 işlemi için tarih/süre ayrımı da kaynak açıklamalarına göre açıkça etiketlendi. Örneğin Âdem hesabındaki MÖ 7610 bir tarih, 1000 ise ömür süresidir; 1000 sayısı Davud'un yönetim tarihiyle otomatik bağlanmaz. Bunlar yeni tarih iddiaları değil, mevcut hesap girdilerinin tür bilgileridir.
+
+## V20 — Kâğıt, yeşim ve gün ışığı
+
+Uygulamanın ortak tasarım dili yenilendi: sıcak krem / orman yeşili renkleri, editoryal başlıklar, tutarlı yüzeyler ve açık/koyu görünüm. Yapay zekâyla üretilen mimari giriş görseli 96 KB WebP olarak yerel ve çevrimdışı pakete dahildir; belirli bir gerçek mekânı temsil etmez.
+
+- Ana sayfada **Oku / Keşfet / İz sür** girişleri; günlük hedef sağ sütunda, plan/stüdyo kısayolları okuma alanının altında. Kur’an sayfasında 114 sure korunur.
+- Masaüstünde üç gruplu menü, telefonda alt gezinme; mevcut düğümler taşındığından olay işleyicileri korunur. Klavyeyle “İçeriğe geç”, görünür odak ve `aria-current` durumları eklendi.
+- Okuma, dinleme, kaynak kataloğu ve atölyede tutarlı kartlar ve kontroller. Arapça/meal boyut tercihleri, odak modu ve tüm kişisel kayıtlar korunur. Üst araç çubuğunda ve ayet işlemlerinde 44 px dokunma hedefleri.
+- Yeni bir hesap veya izleme mekanizması yok. Tema meta bilgisi güncellenir; kayıtlı koyu görünüm sayfa başlangıcında uygulanır. Hareket azaltma tercihi korunur.
+- `node test-v20.mjs`: 11 ekran × 5 genişlik × 2 tema; taşma, menü ve giriş işlevleri, klavye kısayolu, tema kalıcılığı, font boyutları/odak modu, çevrimdışı görsel ve 114 sure. V2–V9, V11–V16, V18–V19, Pages ve eski cache-first worker'dan güncelleme regresyonları da geçmiştir.
