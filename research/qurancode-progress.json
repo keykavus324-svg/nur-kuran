@@ -1,0 +1,95 @@
+{
+  "completedPages": [
+    8,
+    30
+  ],
+  "nextPages": [
+    31,
+    63
+  ],
+  "reviewedItems": 44,
+  "chapters": [
+    {
+      "id": "method",
+      "title": "Yöntem ve giriş",
+      "range": [
+        8,
+        13
+      ],
+      "ready": true
+    },
+    {
+      "id": "c1",
+      "title": "I. Bölüm · Âdem’den Hûd’a",
+      "range": [
+        14,
+        30
+      ],
+      "ready": true
+    },
+    {
+      "id": "c2",
+      "title": "II. Bölüm · Sâlih’ten İbrahim’e",
+      "range": [
+        31,
+        63
+      ],
+      "ready": false
+    },
+    {
+      "id": "c3",
+      "title": "III. Bölüm · İsmail’den Hatşepsut’a",
+      "range": [
+        64,
+        113
+      ],
+      "ready": false
+    },
+    {
+      "id": "c4",
+      "title": "IV. Bölüm · Harun’dan Davud’a",
+      "range": [
+        114,
+        181
+      ],
+      "ready": false
+    },
+    {
+      "id": "c5",
+      "title": "V. Bölüm · Süleyman’dan Muhammed’e",
+      "range": [
+        182,
+        225
+      ],
+      "ready": false
+    },
+    {
+      "id": "conclusion",
+      "title": "Sonuç",
+      "range": [
+        226,
+        227
+      ],
+      "ready": false
+    },
+    {
+      "id": "appendix",
+      "title": "Ek A",
+      "range": [
+        228,
+        231
+      ],
+      "ready": false
+    },
+    {
+      "id": "glossary",
+      "title": "Sözlük",
+      "range": [
+        232,
+        248
+      ],
+      "ready": false
+    }
+  ],
+  "notes": "İlk aşama: giriş ve I. bölümün sayısal savları Türkçe; kaynak iki tablo elle aktarıldı, toplamlar kontrol edildi. Tam kitap henüz tamamlanmadı."
+}

@@ -58,3 +58,9 @@ chromium-download.log
 v16-*.png
 v16-backup-test.json
 workbench-v16.js
+
+v17-*.png
+number-book-v17.js
+uploads/
+research/qurancode-pages.json
+research/qurancode-text.txt

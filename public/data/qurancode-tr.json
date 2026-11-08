@@ -1,0 +1,1836 @@
+{
+  "version": 1,
+  "title": "Historical Quran Code",
+  "author": "Hisham Amin Almasri",
+  "isbn": "978-9957-67-214-0",
+  "year": 2019,
+  "pages": 248,
+  "coverage": "Giriş ve I. bölüm: PDF 8–30. Diğer bölümlerin tam Türkçe incelemesi henüz hazır değildir.",
+  "chapters": [
+    {
+      "id": "method",
+      "title": "Yöntem ve giriş",
+      "range": [
+        8,
+        13
+      ],
+      "ready": true
+    },
+    {
+      "id": "c1",
+      "title": "I. Bölüm · Âdem’den Hûd’a",
+      "range": [
+        14,
+        30
+      ],
+      "ready": true
+    },
+    {
+      "id": "c2",
+      "title": "II. Bölüm · Sâlih’ten İbrahim’e",
+      "range": [
+        31,
+        63
+      ],
+      "ready": false
+    },
+    {
+      "id": "c3",
+      "title": "III. Bölüm · İsmail’den Hatşepsut’a",
+      "range": [
+        64,
+        113
+      ],
+      "ready": false
+    },
+    {
+      "id": "c4",
+      "title": "IV. Bölüm · Harun’dan Davud’a",
+      "range": [
+        114,
+        181
+      ],
+      "ready": false
+    },
+    {
+      "id": "c5",
+      "title": "V. Bölüm · Süleyman’dan Muhammed’e",
+      "range": [
+        182,
+        225
+      ],
+      "ready": false
+    },
+    {
+      "id": "conclusion",
+      "title": "Sonuç",
+      "range": [
+        226,
+        227
+      ],
+      "ready": false
+    },
+    {
+      "id": "appendix",
+      "title": "Ek A",
+      "range": [
+        228,
+        231
+      ],
+      "ready": false
+    },
+    {
+      "id": "glossary",
+      "title": "Sözlük",
+      "range": [
+        232,
+        248
+      ],
+      "ready": false
+    }
+  ],
+  "timeline": [
+    [
+      "Âdem’in yaratılışı",
+      7610
+    ],
+    [
+      "Âdem’in ölümü",
+      6610
+    ],
+    [
+      "Nuh’un doğumu",
+      6384
+    ],
+    [
+      "Nuh tufanı",
+      5434
+    ],
+    [
+      "Nuh’un ölümü",
+      4560
+    ],
+    [
+      "Hûd’un doğumu",
+      3761
+    ],
+    [
+      "Hûd’un olası Kâbe yapımı",
+      3118
+    ],
+    [
+      "Âd’ın helâki",
+      3088
+    ],
+    [
+      "Hûd’un ölümü",
+      2965
+    ]
+  ],
+  "items": [
+    {
+      "id": "yontem",
+      "title": "Sayılardan tarih çıkarma yöntemi",
+      "pages": [
+        9,
+        10,
+        18
+      ],
+      "summary": "Yazar, ayet, kelime veya harf sayısını ve bazen bir sözcüğün metindeki sıra numarasını güneş yılıyla eşleştirir. Hangi birimin kullanılacağı her olay için ayrı seçilir. Sure adı da hangi kişi veya olayla bağlantı kurulacağına rehber kabul edilir.",
+      "steps": [],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Bir metin biriminin bir güneş yılına eşit sayılması, kitabın varsayımıdır; aritmetik işlemin kendisinden çıkmaz.",
+        "Yazar 18. sayfada bu yaş hesaplama yönteminin genel bir kural olmadığını açıkça söyler.",
+        "Osmanî yazım kullanıldığını belirtir; fakat tüm hesaplar için tek bir ayrıntılı kelime ayırma, hareke ve harf normalleştirme şartnamesi vermez."
+      ],
+      "topic": "method",
+      "chapter": "method"
+    },
+    {
+      "id": "sinirlar",
+      "title": "Yazarın kendi sınırlılık açıklamaları",
+      "pages": [
+        10,
+        11,
+        12,
+        28
+      ],
+      "summary": "Yazar bütün sonuçların yüzde yüz doğru olduğunu ileri sürmediğini, rastlantı olasılığının payı bulunduğunu ve bazı tarihleri ya da başlangıç harflerini açıklayamadığını belirtir. İncelemesini tamamen bitirmeden yayımladığını, başkalarının hatalarını düzeltebileceğini söyler. Hûd için önerdiği tarihlerin doğruluğunu kesin olarak ileri süremediğini 28. sayfada ayrıca ifade eder.",
+      "steps": [],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Bu menü kitabın savlarını Türkçe olarak aktarır; tarihsel gerçeklik veya dinî kesinlik sertifikası vermez.",
+        "Hesabın aritmetik olarak tutması, kullanılan sayımın, tarihlerin veya sayılar arasındaki ilişkinin doğrulandığı anlamına gelmez."
+      ],
+      "topic": "method",
+      "chapter": "method"
+    },
+    {
+      "id": "giris-firavun",
+      "title": "Firavun için 54 ve 18 eşleştirmeleri",
+      "pages": [
+        9
+      ],
+      "summary": "Girişte yazar, ek almamış “Firavun” sözcüğünün 54 kez geçmesini III. Thutmose için kabul ettiği 54 yıllık saltanatla; “Firavun halkı” ifadesinin 18 kez geçmesini ise 18. Hanedan ile ilişkilendirir.",
+      "steps": [],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Bunlar yazarın sayım ve tarih eşleştirmeleridir. “Ek almamış” sözcük ve ifade sınırlarının tüm metinde nasıl uygulandığı ayrıca denetlenmelidir.",
+        "Ayrıntılı ele alış IV. bölümdedir; bu kayıt yalnızca girişte verilen savı kapsar."
+      ],
+      "topic": "method",
+      "chapter": "method"
+    },
+    {
+      "id": "giris-kehf",
+      "title": "Kehf kıssasında 308 sözcük ve 309. konum",
+      "pages": [
+        10
+      ],
+      "summary": "Yazar, Bassam Jarrar’a atıfla mağara kıssasının başlangıcından “üç yüz ve dokuz arttırdılar” ifadesine kadar 308 kelime bulunduğunu, söz konusu ifadenin sıra numarasının 309 olduğunu aktarır.",
+      "steps": [
+        {
+          "label": "Önceki 308 birimden sonraki sıra",
+          "operands": [
+            308,
+            1
+          ],
+          "expected": 309,
+          "operator": "add",
+          "unit": "sıra"
+        }
+      ],
+      "counts": [],
+      "refs": [
+        [
+          18,
+          25
+        ]
+      ],
+      "notes": [
+        "Başlangıç noktası, dahil etme/dışlama kuralı ve “ifadenin sıra numarası”nın kelime düzeyinde tanımı girişte tam açıklanmaz. Bu nedenle 308 sayımı bu kayıtta yeniden doğrulanmış sayılmaz.",
+        "Bu savın ayrıntıları V. bölümde ele alınmaktadır."
+      ],
+      "topic": "method",
+      "chapter": "method"
+    },
+    {
+      "id": "giris-misir",
+      "title": "Mısır kronolojisinde 480, 430 ve 330 yıl",
+      "pages": [
+        12
+      ],
+      "summary": "Yazar, Kitâb-ı Mukaddes kaynaklı 480 yıllık tapınak–çıkış aralığını, 430 yıllık Mısır’da kalış anlatısını ve bunların farklı firavunlarla ilişkilendirilmesini tartışır. Kendi modelinde Mısır’da kalışın 330 yıl olduğunu ileri sürer.",
+      "steps": [],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Bu sayfa 330 sonucunu üreten tam işlem zincirini vermez. Rakamlar kaynakta tartışıldığı biçimde aktarılır; bağımsız tarihsel doğrulama yapılmış değildir."
+      ],
+      "topic": "method",
+      "chapter": "method"
+    },
+    {
+      "id": "giris-takvim",
+      "title": "Milat, yıl sıfırı ve bir yıllık tarih farkları",
+      "pages": [
+        12
+      ],
+      "summary": "Yazar İsa’nın doğumunu MÖ 1 olarak kabul eder ve bunu “sıfır yıl” diye yorumlar. İskender’in ölümü için 323 yerine MÖ 322, Muhammed’in doğumu için MS 572 tarihini savunur.",
+      "steps": [],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Standart MÖ/MS tarihlemelerinde yıl sıfırı yoktur; astronomik yıl numaralandırması farklıdır. İki düzen karıştırılmamalıdır.",
+        "Kaynak, Muhammed’in yaygın doğum tarihi ifadesini bu sayfada “571 BC” biçiminde basmıştır. Bu, metindeki MÖ/MS tutarsızlığı olarak kaydedilir; sessizce düzeltilmiş bir alıntı değildir."
+      ],
+      "topic": "method",
+      "chapter": "method"
+    },
+    {
+      "id": "giris-dort-esik",
+      "title": "Girişteki dört kelime sayısı–tarih eşleştirmesi",
+      "pages": [
+        13
+      ],
+      "summary": "Yazar Nahl’in 1844 kelimesini İbrahim’in MÖ 1844 ölümüyle; Yûsuf’un 1777 kelimesini Yusuf’un MÖ 1777 doğumuyla; Meryem’in 961 kelimesini Davud’un MÖ 961 ölümüyle; Kasas’ın 1430 kelimesini Musa’nın firavununun ölümü ve çıkış için önerdiği MÖ 1430 ile eşleştirir.",
+      "steps": [],
+      "counts": [
+        {
+          "surah": 16,
+          "kind": "words",
+          "claimed": 1844,
+          "label": "Nahl"
+        },
+        {
+          "surah": 12,
+          "kind": "words",
+          "claimed": 1777,
+          "label": "Yûsuf"
+        },
+        {
+          "surah": 19,
+          "kind": "words",
+          "claimed": 961,
+          "label": "Meryem"
+        },
+        {
+          "surah": 28,
+          "kind": "words",
+          "claimed": 1430,
+          "label": "Kasas"
+        }
+      ],
+      "refs": [],
+      "notes": [
+        "Bunlar girişte belirtilen dayanak örnekleridir; ilgili kişi ve olayların ayrıntılı hesapları sonraki bölümlerde ayrıca incelenecektir."
+      ],
+      "topic": "method",
+      "chapter": "method"
+    },
+    {
+      "id": "adem-bakara",
+      "title": "Âdem–Musa aralığı ve Bakara’nın 6117 kelimesi",
+      "pages": [
+        15,
+        16
+      ],
+      "summary": "Yazar Âdem’in yaratılışını MÖ 7610, Musa’nın doğumunu MÖ 1493 alır. İki tarih arasındaki 6117 yılı Bakara suresi için verdiği 6117 kelime sayısıyla eşleştirir. Surede İbrahim adının 15, Musa adının 13 kez geçtiğini de seçim gerekçesi bağlamında belirtir.",
+      "steps": [
+        {
+          "label": "Kitapta kabul edilen iki tarih arasındaki fark",
+          "operands": [
+            7610,
+            1493
+          ],
+          "expected": 6117,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 2,
+          "kind": "words",
+          "claimed": 6117,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [
+        "Âdem ve Musa için kullanılan mutlak tarihler yazarın modeline aittir.",
+        "Sure adı, konu ve kişi adlarının tekrarları hangi tarihin seçileceğine gerekçe yapılır; bu seçim tek başına bağımsız tarih kanıtı değildir."
+      ],
+      "topic": "adam",
+      "chapter": "c1"
+    },
+    {
+      "id": "adem-alti-aralik",
+      "title": "Altı zaman aralığının 6117 toplamı",
+      "pages": [
+        15,
+        16
+      ],
+      "summary": "Musa’nın doğumundan İbrahim’in ölümüne 351; buradan Hûd’un doğumuna 1917; Hûd’un doğumundan tufana 1673; tufandan Nuh’un doğumuna 950; Nuh’un doğumundan Âdem’in ölümüne 226; Âdem’in yaşamı için 1000 yıl seçilir. Yazar bu altı parçanın toplamını Bakara kelime sayısıyla eşleştirir.",
+      "steps": [
+        {
+          "label": "Altı seçilmiş aralığın toplamı",
+          "operands": [
+            351,
+            1917,
+            1673,
+            950,
+            226,
+            1000
+          ],
+          "expected": 6117,
+          "operator": "add",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 55,
+          "kind": "words",
+          "claimed": 351,
+          "label": ""
+        },
+        {
+          "surah": 11,
+          "kind": "words",
+          "claimed": 1917,
+          "label": ""
+        },
+        {
+          "surah": 11,
+          "kind": "letters",
+          "claimed": 1673,
+          "label": "Hûd 25–49",
+          "start": 25,
+          "end": 49
+        },
+        {
+          "surah": 71,
+          "kind": "words",
+          "claimed": 226,
+          "label": ""
+        }
+      ],
+      "refs": [
+        [
+          29,
+          14
+        ],
+        [
+          11,
+          25
+        ],
+        [
+          11,
+          49
+        ]
+      ],
+      "notes": [
+        "Aynı zincirde kelime sayısı, harf sayısı, ayette belirtilen süre ve rivayete dayalı yaş birlikte kullanılır.",
+        "950 yılın doğumdan tufana kadar geçen yaş olarak alınması ayrıca bir yorumdur."
+      ],
+      "topic": "adam",
+      "chapter": "c1"
+    },
+    {
+      "id": "adem-1000",
+      "title": "Âdem’in anıldığı ayetlerde 1000 harf tablosu",
+      "pages": [
+        17,
+        18
+      ],
+      "summary": "Kitap, “Âdemoğulları” ifadelerini dışarıda bırakarak Âdem’in anıldığı 16 ayetin harf sayılarını verir. Tablo toplamı 1000’dir; yazar bu sayıyı 1000 yıllık ömür olarak yorumlar. Kitâb-ı Mukaddes’teki 930 yıl ile karşılaştırır.",
+      "steps": [],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Aşağıdaki tablo kitaptaki sayıları aynen sayısal veri olarak taşır. Toplamın doğruluğu, sayım kurallarının veya yaş yorumunun doğruluğundan ayrıdır.",
+        "Yazar, Âdem’in yaşı için bir hadis anlatısını da dayanak olarak kullanır; bu menü hadis sıhhat değerlendirmesi yapmaz."
+      ],
+      "topic": "adam",
+      "chapter": "c1",
+      "table": {
+        "title": "Tablo 1–1 · Kitabın Âdem harf sayımı",
+        "claimedTotal": 1000,
+        "rows": [
+          [
+            2,
+            31,
+            69
+          ],
+          [
+            2,
+            33,
+            99
+          ],
+          [
+            2,
+            34,
+            62
+          ],
+          [
+            2,
+            35,
+            79
+          ],
+          [
+            2,
+            37,
+            43
+          ],
+          [
+            3,
+            33,
+            48
+          ],
+          [
+            3,
+            59,
+            48
+          ],
+          [
+            7,
+            11,
+            70
+          ],
+          [
+            7,
+            19,
+            69
+          ],
+          [
+            17,
+            61,
+            58
+          ],
+          [
+            18,
+            50,
+            110
+          ],
+          [
+            20,
+            115,
+            37
+          ],
+          [
+            20,
+            116,
+            42
+          ],
+          [
+            20,
+            117,
+            49
+          ],
+          [
+            20,
+            120,
+            51
+          ],
+          [
+            20,
+            121,
+            66
+          ]
+        ]
+      }
+    },
+    {
+      "id": "adem-olum",
+      "title": "Âdem’in ölümünün MÖ 6610’a yerleştirilmesi",
+      "pages": [
+        14,
+        16,
+        17
+      ],
+      "summary": "Yazarın MÖ 7610 yaratılış tarihi ve 1000 yıllık ömür kabulü, birinci kronoloji tablosundaki MÖ 6610 ölüm tarihine karşılık gelir.",
+      "steps": [
+        {
+          "label": "Tablodaki tarihin açık aritmetik yazımı",
+          "operands": [
+            7610,
+            1000
+          ],
+          "expected": 6610,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Bu işlem kronoloji ile ömür kabulünün açık yazımıdır; bu biçimiyle ayrı bir eşitlik olarak basılı değildir."
+      ],
+      "topic": "adam",
+      "chapter": "c1"
+    },
+    {
+      "id": "nuh-dogum",
+      "title": "Nuh’un doğumu: Âdem’den 226 yıl sonra",
+      "pages": [
+        18
+      ],
+      "summary": "Nûh suresi için verilen 226 kelime, Âdem’in ölümü ile Nuh’un doğumu arasındaki yıl sayısı kabul edilir. Kitap, Kitâb-ı Mukaddes’teki 126 ile son iki rakamın ortak olmasına da dikkat çeker.",
+      "steps": [
+        {
+          "label": "Âdem’in ölümü ile Nuh’un doğumu",
+          "operands": [
+            6610,
+            6384
+          ],
+          "expected": 226,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 71,
+          "kind": "words",
+          "claimed": 226,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [
+        "126 ve 226’nın “26” sonunu paylaşması, kendi başına hangi sayının tarihsel olarak doğru olduğunu belirlemez."
+      ],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "lamek-dogum",
+      "title": "Lâmek’in doğumu için 182 yıl",
+      "pages": [
+        18,
+        19
+      ],
+      "summary": "Yazar, Nuh’un babası Lâmek’in Nuh’tan 182 yıl önce doğduğu bilgisini Kitâb-ı Mukaddes’ten alır. Nuh için kabul ettiği MÖ 6384’e bu süreyi ekleyerek MÖ 6566’ya ulaşır.",
+      "steps": [
+        {
+          "label": "Nuh’un doğumuna önceki 182 yılın eklenmesi",
+          "operands": [
+            6384,
+            182
+          ],
+          "expected": 6566,
+          "operator": "add",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "182, Kur’an harf/kelime sayımından değil başka bir dinî kaynaktan alınır."
+      ],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "lamek-1044",
+      "title": "A‘râf’taki Âdem anlatısı ve 1044 yıl",
+      "pages": [
+        19
+      ],
+      "summary": "Âdem’in yaratılışı ile Lâmek’in doğumu arasında 1044 yıl hesaplanır. Yazar bunu A‘râf suresindeki Âdem anlatısının 1044 harfiyle eşleştirir.",
+      "steps": [
+        {
+          "label": "İki kabul edilmiş tarih arasındaki fark",
+          "operands": [
+            7610,
+            6566
+          ],
+          "expected": 1044,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Bu sayfada kıssanın kesin başlangıç ve bitiş ayetleri verilmez; bu yüzden kapsam otomatik olarak tahmin edilmemiştir."
+      ],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "tufan-950",
+      "title": "Tufanın MÖ 5434’e yerleştirilmesi",
+      "pages": [
+        19
+      ],
+      "summary": "Ankebût 14’teki “bin yıldan elli yıl eksik” süre 950 olarak alınır. Yazar bunu Nuh’un doğumu ile tufan arasındaki toplam yaş kabul ederek MÖ 6384’ten çıkarır.",
+      "steps": [
+        {
+          "label": "Ayette belirtilen sürenin aritmetiği",
+          "operands": [
+            1000,
+            50
+          ],
+          "expected": 950,
+          "operator": "subtract",
+          "unit": "yıl"
+        },
+        {
+          "label": "Yazarın yaş yorumu ile tarih hesabı",
+          "operands": [
+            6384,
+            950
+          ],
+          "expected": 5434,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [],
+      "refs": [
+        [
+          29,
+          14
+        ]
+      ],
+      "notes": [
+        "Ayette anlatılan halkının arasındaki süre ile doğumdan itibaren toplam yaşın aynı sayılması yazarın yorumudur.",
+        "Kitap, Kitâb-ı Mukaddes’teki 600 yaş anlatısını da karşılaştırma amacıyla belirtir."
+      ],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "tufan-tarih-karsilastirma",
+      "title": "Tufan için kitapta karşılaştırılan diğer tarihler",
+      "pages": [
+        19,
+        20
+      ],
+      "summary": "Yazar, 1997 tarihli Ryan–Pitman çalışmasına atıfla yaklaşık MÖ 5500 ve 100 metreden fazla seviye farkı anlatır. Başka bir çalışma için MÖ 7500 tarihini, Kitâb-ı Mukaddes yorumları için MÖ 2282 ve MÖ 3568 tarihlerini aktarır. Bunları kendi MÖ 5434 önerisiyle tartışır.",
+      "steps": [],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Bu kayıt, kitabın aktardığı tarih ve ölçüleri listeler; jeoloji çalışmalarının bulgularını bağımsız olarak doğruladığı anlamına gelmez.",
+        "Yazar Karadeniz açıklamasının tartışmalı olduğunu kendisi de belirtir."
+      ],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "tufan-nisa",
+      "title": "Tufan–Efrayim aralığı ve 3747 kelime",
+      "pages": [
+        20
+      ],
+      "summary": "Nisâ suresinin 3747 kelime olduğu savı, tufan için MÖ 5434 ile Efrayim’in ölümü için MÖ 1687 arasındaki farka bağlanır.",
+      "steps": [
+        {
+          "label": "Önerilen tarihler arasındaki fark",
+          "operands": [
+            5434,
+            1687
+          ],
+          "expected": 3747,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 4,
+          "kind": "words",
+          "claimed": 3747,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "tufan-lam",
+      "title": "Bakara’daki 3198 lâm ve Eber bağlantısı",
+      "pages": [
+        20
+      ],
+      "summary": "Bakara’daki lâm harfinin 3198 tekrarı, tufan ile Eber’in ölümü arasındaki 3198 yıl olarak yorumlanır.",
+      "steps": [
+        {
+          "label": "Tufan ile Eber’in ölümü",
+          "operands": [
+            5434,
+            2236
+          ],
+          "expected": 3198,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 2,
+          "kind": "occurrences",
+          "claimed": 3198,
+          "label": "Lâm tekrarı",
+          "letters": [
+            "ل"
+          ]
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "nuh-1824",
+      "title": "Nuh’un anıldığı ayetlerde 1824 harf tablosu",
+      "pages": [
+        20,
+        21
+      ],
+      "summary": "Kitap, Nuh’un kavmi ve eşinin anıldığı ayetleri dışarıda bırakan 28 ayetlik bir harf tablosu verir. Toplam 1824 harf, Nuh’un ömrü olarak yorumlanır.",
+      "steps": [],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Tabloya dahil etme/dışlama kuralı, sayı ile yaş arasında ilişki kurma varsayımından ayrı incelenmelidir.",
+        "Aritmetik toplam aşağıdaki satırlardan yeniden hesaplanabilir."
+      ],
+      "topic": "noah",
+      "chapter": "c1",
+      "table": {
+        "title": "Tablo 1–2 · Kitabın Nuh harf sayımı",
+        "claimedTotal": 1824,
+        "rows": [
+          [
+            4,
+            163,
+            125
+          ],
+          [
+            10,
+            71,
+            135
+          ],
+          [
+            11,
+            32,
+            55
+          ],
+          [
+            11,
+            36,
+            59
+          ],
+          [
+            11,
+            42,
+            71
+          ],
+          [
+            11,
+            45,
+            55
+          ],
+          [
+            11,
+            46,
+            73
+          ],
+          [
+            11,
+            48,
+            69
+          ],
+          [
+            17,
+            3,
+            31
+          ],
+          [
+            17,
+            17,
+            53
+          ],
+          [
+            7,
+            59,
+            75
+          ],
+          [
+            11,
+            25,
+            35
+          ],
+          [
+            21,
+            76,
+            50
+          ],
+          [
+            29,
+            14,
+            68
+          ],
+          [
+            57,
+            26,
+            71
+          ],
+          [
+            19,
+            58,
+            127
+          ],
+          [
+            26,
+            106,
+            24
+          ],
+          [
+            26,
+            116,
+            35
+          ],
+          [
+            33,
+            7,
+            76
+          ],
+          [
+            37,
+            75,
+            26
+          ],
+          [
+            37,
+            79,
+            18
+          ],
+          [
+            71,
+            21,
+            49
+          ],
+          [
+            71,
+            26,
+            36
+          ],
+          [
+            3,
+            33,
+            48
+          ],
+          [
+            6,
+            84,
+            96
+          ],
+          [
+            23,
+            23,
+            62
+          ],
+          [
+            42,
+            13,
+            151
+          ],
+          [
+            71,
+            1,
+            51
+          ]
+        ]
+      }
+    },
+    {
+      "id": "nuh-suresi",
+      "title": "Nûh suresinde 28 ayet, 226 kelime ve 953 harf",
+      "pages": [
+        21,
+        22
+      ],
+      "summary": "Yazar Nûh suresi için 28 ayet, 226 kelime ve 953 harf verir. 28 ayeti, önceki tabloda seçtiği 28 ayetle eşleştirir; 226 kelimeyi Âdem’in ölümü–Nuh’un doğumu aralığına yeniden bağlar. Uzun surelerin harf sayılarının kendi kabul ettiği yaklaşık 9625 yıllık insanlık tarihini aşabildiğini ve bunlar için henüz açıklama bulamadığını belirtir.",
+      "steps": [],
+      "counts": [
+        {
+          "surah": 71,
+          "kind": "verses",
+          "claimed": 28,
+          "label": ""
+        },
+        {
+          "surah": 71,
+          "kind": "words",
+          "claimed": 226,
+          "label": ""
+        },
+        {
+          "surah": 71,
+          "kind": "letters",
+          "claimed": 953,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [
+        "“Yaklaşık 9625 yıl” kitabın kronoloji çerçevesidir; burada insanlık tarihine ilişkin bilimsel bir sonuç olarak sunulmaz."
+      ],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "nuh-olum",
+      "title": "Nuh’un ölümünün MÖ 4560’a yerleştirilmesi",
+      "pages": [
+        14,
+        20,
+        21,
+        22
+      ],
+      "summary": "Nuh için kabul edilen MÖ 6384 doğum ile 1824 yıllık ömür, kronoloji tablosundaki MÖ 4560 ölüm tarihini verir.",
+      "steps": [
+        {
+          "label": "Kronoloji ve yaş kabulünün açık aritmetiği",
+          "operands": [
+            6384,
+            1824
+          ],
+          "expected": 4560,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Bu yazım, tablolar arasındaki hesabı açıklaştırmak için verilmiştir; basılı metindeki ayrı bir eşitliğin birebir aktarımı değildir."
+      ],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "nuh-enam",
+      "title": "En‘âm’ın 3050 kelimesi ve Âdem–Nuh aralığı",
+      "pages": [
+        22
+      ],
+      "summary": "En‘âm suresi için ileri sürülen 3050 kelime, Âdem’in yaratılışından Nuh’un ölümüne kadar olan 3050 yıla bağlanır.",
+      "steps": [
+        {
+          "label": "Yaratılış tarihi ile Nuh’un ölümü",
+          "operands": [
+            7610,
+            4560
+          ],
+          "expected": 3050,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 6,
+          "kind": "words",
+          "claimed": 3050,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "nuh-uzeyir",
+      "title": "Bakara’daki 4214 elif ve Üzeyir’in ikinci ölümü",
+      "pages": [
+        22
+      ],
+      "summary": "Bakara’da elifin 4214 defa geçtiği sayımı, Nuh’un ölümü ile yazarın Üzeyir için kabul ettiği “ikinci ölüm” tarihi arasına yerleştirilir.",
+      "steps": [
+        {
+          "label": "Nuh’un ölümü ile önerilen Üzeyir tarihi",
+          "operands": [
+            4560,
+            346
+          ],
+          "expected": 4214,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 2,
+          "kind": "occurrences",
+          "claimed": 4214,
+          "label": "Elif tekrarı",
+          "letters": [
+            "ا"
+          ]
+        }
+      ],
+      "refs": [],
+      "notes": [
+        "“İkinci ölüm” ve MÖ 346 tarihi kitabın ileride açıkladığı yorum çerçevesine aittir. Elif varyantlarının sayım kuralı ayrıca önemlidir."
+      ],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "nuh-ahkaf",
+      "title": "Ahkāf’ın 2627 harfi ve İsmail bağlantısı",
+      "pages": [
+        22
+      ],
+      "summary": "Ahkāf suresinin 2627 harf olduğu savı, Nuh’un ölümü ile İsmail’in doğumu için seçilen tarihlerin farkıyla eşleştirilir.",
+      "steps": [
+        {
+          "label": "Nuh’un ölümü ile İsmail’in doğumu",
+          "operands": [
+            4560,
+            1933
+          ],
+          "expected": 2627,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 46,
+          "kind": "letters",
+          "claimed": 2627,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "noah",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-dogum",
+      "title": "Hûd’un doğumu ve 1917 kelime",
+      "pages": [
+        22,
+        23
+      ],
+      "summary": "Hûd suresi için verilen 1917 kelime, Hûd’un doğumu ile İbrahim’in MÖ 1844 ölümü arasındaki yıl sayısı kabul edilir; böylece MÖ 3761 doğum tarihi önerilir.",
+      "steps": [
+        {
+          "label": "İbrahim’in ölümüne önceki aralığın eklenmesi",
+          "operands": [
+            1844,
+            1917
+          ],
+          "expected": 3761,
+          "operator": "add",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 11,
+          "kind": "words",
+          "claimed": 1917,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [
+        "Sure adının kişiyi göstermesi, 1917’nin doğum mu ölüm mü ile ilişkilendirileceğini tek başına belirlemez. Yazar bunu sonraki parçalama ile gerekçelendirmeye çalışır."
+      ],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-ahkaf-hac",
+      "title": "1917’nin 643 ve 1274’e ayrılması",
+      "pages": [
+        23
+      ],
+      "summary": "Yazar 1917’den Ahkāf için verdiği 643 kelimeyi çıkarınca Hac için verdiği 1274 kelimeyi elde eder. İlk sayıyı Hûd’a, ikinci sayıyı Kâbe ve hac üzerinden İbrahim’e bağlar.",
+      "steps": [
+        {
+          "label": "Hûd–Ahkāf kelime sayılarının farkı",
+          "operands": [
+            1917,
+            643
+          ],
+          "expected": 1274,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 46,
+          "kind": "words",
+          "claimed": 643,
+          "label": ""
+        },
+        {
+          "surah": 22,
+          "kind": "words",
+          "claimed": 1274,
+          "label": ""
+        }
+      ],
+      "refs": [
+        [
+          46,
+          21
+        ],
+        [
+          22,
+          27
+        ]
+      ],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-kabe",
+      "title": "Hûd’un Kâbe’yi yapmış olabileceği tarih",
+      "pages": [
+        23,
+        24
+      ],
+      "summary": "Yazar, Hûd’un Kâbe’nin yapıcılarından biri olabileceğini ve bunu 643 yaşında yapmış olabileceğini ileri sürer. MÖ 3761’den 643 çıkarıldığında MÖ 3118 elde edilir.",
+      "steps": [
+        {
+          "label": "Önerilen doğumdan varsayılan yapım yaşının çıkarılması",
+          "operands": [
+            3761,
+            643
+          ],
+          "expected": 3118,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 46,
+          "kind": "words",
+          "claimed": 643,
+          "label": ""
+        }
+      ],
+      "refs": [
+        [
+          3,
+          96
+        ]
+      ],
+      "notes": [
+        "Kaynak bu yapım iddiasını kesin değil olası olarak kurar. Burada da olasılık dili korunmuştur.",
+        "643’ün yapı yaşı kabul edilmesi ayrıca bir varsayımdır."
+      ],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-1625",
+      "title": "“İlk” sözcüğünün 1625. sırası ve Musa anlatısı",
+      "pages": [
+        24
+      ],
+      "summary": "Kitap, Âl-i İmrân 96’daki “ilk” sözcüğünün suredeki kelime sırasını 1625 olarak verir. Şuarâ’daki Musa anlatısının 1625 harf olduğunu da ileri sürerek bu sayıyı olası ilk Kâbe yapımı ile Musa’nın doğumu arasındaki yıla bağlar.",
+      "steps": [
+        {
+          "label": "Önerilen Kâbe yapımı ile Musa’nın doğumu",
+          "operands": [
+            3118,
+            1493
+          ],
+          "expected": 1625,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [],
+      "refs": [
+        [
+          3,
+          96
+        ]
+      ],
+      "notes": [
+        "Şuarâ kıssasının ayet sınırları ve sıra sayımına besmelenin dahil edilip edilmediği bu sayfada belirtilmez; varsayılarak doldurulmamıştır."
+      ],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "ad-673",
+      "title": "Âd’ın helâki için 673 harf–yıl eşleştirmesi",
+      "pages": [
+        24
+      ],
+      "summary": "Hûd suresindeki Hûd anlatısının 673 harf olduğu kabul edilir. Bu sayı Hûd’un kavminin helâki sırasındaki yaşı sayılır ve MÖ 3088 tarihi önerilir.",
+      "steps": [
+        {
+          "label": "Önerilen doğumdan 673 yılın çıkarılması",
+          "operands": [
+            3761,
+            673
+          ],
+          "expected": 3088,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [],
+      "refs": [],
+      "notes": [
+        "Bu sayfada harfleri sayılan anlatının kesin ayet aralığı belirtilmez. Tarih ve yaş eşleştirmesi yazarın savıdır."
+      ],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "ad-hakka",
+      "title": "Hâkka’nın 258 kelimesi ve Sâlih’in doğumu",
+      "pages": [
+        24
+      ],
+      "summary": "Hâkka suresi için verilen 258 kelime, Âd’ın helâki ile Sâlih’in MÖ 2830 doğumu arasındaki farkla eşleştirilir.",
+      "steps": [
+        {
+          "label": "Âd’ın helâki ile önerilen Sâlih doğumu",
+          "operands": [
+            3088,
+            2830
+          ],
+          "expected": 258,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 69,
+          "kind": "words",
+          "claimed": 258,
+          "label": ""
+        }
+      ],
+      "refs": [
+        [
+          69,
+          1
+        ],
+        [
+          69,
+          4
+        ]
+      ],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-olum",
+      "title": "Hûd’un ölümü ve 123 ayet",
+      "pages": [
+        25
+      ],
+      "summary": "Yazar Hûd’un, kavminin helâkinden 123 yıl sonra öldüğünü kabul eder; bu 123 yılı Hûd suresinin ayet sayısıyla ilişkilendirir. Sonuç MÖ 2965’tir.",
+      "steps": [
+        {
+          "label": "Helâk tarihinden 123 yıl sonrası",
+          "operands": [
+            3088,
+            123
+          ],
+          "expected": 2965,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 11,
+          "kind": "verses",
+          "claimed": 123,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-taha",
+      "title": "135 ayet ve râ tekrarıyla Sâlih bağlantısı",
+      "pages": [
+        25
+      ],
+      "summary": "Tâhâ’nın 135 ayeti ve Ra‘d’daki râ harfinin 135 tekrarı, Hûd’un ölümü ile Sâlih’in doğumu arasındaki 135 yıla eşlenir.",
+      "steps": [
+        {
+          "label": "Hûd’un ölümü ile Sâlih’in doğumu",
+          "operands": [
+            2965,
+            2830
+          ],
+          "expected": 135,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 20,
+          "kind": "verses",
+          "claimed": 135,
+          "label": ""
+        },
+        {
+          "surah": 13,
+          "kind": "occurrences",
+          "claimed": 135,
+          "label": "Râ tekrarı",
+          "letters": [
+            "ر"
+          ]
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-idris",
+      "title": "137 kâf ve Fecr kelimeleriyle İdris bağlantısı",
+      "pages": [
+        25
+      ],
+      "summary": "Meryem’de kâf harfinin 137 tekrarı ve Fecr’in 137 kelimesi, Hûd’un ölümü ile İdris’in MÖ 2828 doğumu arasına yerleştirilir.",
+      "steps": [
+        {
+          "label": "Hûd’un ölümü ile İdris’in doğumu",
+          "operands": [
+            2965,
+            2828
+          ],
+          "expected": 137,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 19,
+          "kind": "occurrences",
+          "claimed": 137,
+          "label": "Kâf tekrarı",
+          "letters": [
+            "ك"
+          ]
+        },
+        {
+          "surah": 89,
+          "kind": "words",
+          "claimed": 137,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-796",
+      "title": "Kâf–hâ–yâ–ayn–sâd toplamı: 796",
+      "pages": [
+        25
+      ],
+      "summary": "Meryem suresindeki başlangıç harflerinin tekrarları kâf 137, hâ 174, yâ 342, ayn 117 ve sâd 26 olarak verilir. Toplam 796, Hûd’un ömrüne eşit kabul edilir.",
+      "steps": [
+        {
+          "label": "Beş harfin kitapta verilen tekrar toplamı",
+          "operands": [
+            137,
+            174,
+            342,
+            117,
+            26
+          ],
+          "expected": 796,
+          "operator": "add",
+          "unit": "tekrar"
+        },
+        {
+          "label": "Önerilen Hûd doğum ve ölüm farkı",
+          "operands": [
+            3761,
+            2965
+          ],
+          "expected": 796,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 19,
+          "kind": "occurrences",
+          "claimed": 137,
+          "label": "Kâf",
+          "letters": [
+            "ك"
+          ]
+        },
+        {
+          "surah": 19,
+          "kind": "occurrences",
+          "claimed": 174,
+          "label": "Hâ",
+          "letters": [
+            "ه"
+          ]
+        },
+        {
+          "surah": 19,
+          "kind": "occurrences",
+          "claimed": 342,
+          "label": "Yâ",
+          "letters": [
+            "ي"
+          ]
+        },
+        {
+          "surah": 19,
+          "kind": "occurrences",
+          "claimed": 117,
+          "label": "Ayn",
+          "letters": [
+            "ع"
+          ]
+        },
+        {
+          "surah": 19,
+          "kind": "occurrences",
+          "claimed": 26,
+          "label": "Sâd",
+          "letters": [
+            "ص"
+          ]
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-muhammed",
+      "title": "Muhammed suresinin 2389 harfi",
+      "pages": [
+        25
+      ],
+      "summary": "Muhammed suresi için verilen 2389 harf, Hûd’un doğumu ile Musa’nın MÖ 1372 ölümü arasına eşlenir.",
+      "steps": [
+        {
+          "label": "Hûd’un doğumu ile Musa’nın ölümü",
+          "operands": [
+            3761,
+            1372
+          ],
+          "expected": 2389,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 47,
+          "kind": "letters",
+          "claimed": 2389,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "ad-necm",
+      "title": "Necm’in 1422 harfi ve Yusuf’un ölümü",
+      "pages": [
+        26
+      ],
+      "summary": "Necm suresinin 1422 harf olduğu savı, Âd’ın helâki ile Yusuf’un MÖ 1666 ölümü arasındaki farka bağlanır.",
+      "steps": [
+        {
+          "label": "Âd’ın helâki ile Yusuf’un ölümü",
+          "operands": [
+            3088,
+            1666
+          ],
+          "expected": 1422,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 53,
+          "kind": "letters",
+          "claimed": 1422,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-yunus",
+      "title": "Yûnus’taki 1224 elif ve Efrayim’in doğumu",
+      "pages": [
+        26
+      ],
+      "summary": "Yûnus suresindeki 1224 elif tekrarı, Hûd’un ölümü ile Efrayim’in MÖ 1741 doğumu arasındaki yıl sayısına bağlanır.",
+      "steps": [
+        {
+          "label": "Hûd’un ölümü ile Efrayim’in doğumu",
+          "operands": [
+            2965,
+            1741
+          ],
+          "expected": 1224,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 10,
+          "kind": "occurrences",
+          "claimed": 1224,
+          "label": "Elif tekrarı",
+          "letters": [
+            "ا"
+          ]
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "ad-rum",
+      "title": "Rûm’daki elif–lâm–mîm toplamı: 1197",
+      "pages": [
+        26
+      ],
+      "summary": "Rûm suresinde elif, lâm ve mîm tekrarlarının toplamı 1197 olarak verilir. Yazar bunu Âd’ın helâki ile Lût’un MÖ 1891 ölümü arasındaki farka bağlar.",
+      "steps": [
+        {
+          "label": "Âd’ın helâki ile Lût’un ölümü",
+          "operands": [
+            3088,
+            1891
+          ],
+          "expected": 1197,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 30,
+          "kind": "occurrences",
+          "claimed": 1197,
+          "label": "Elif + lâm + mîm",
+          "letters": [
+            "ا",
+            "ل",
+            "م"
+          ]
+        }
+      ],
+      "refs": [],
+      "notes": [
+        "Bu sayfa üç harfin ayrı tekrar sayılarını değil yalnızca toplamını verir."
+      ],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-tahrim",
+      "title": "Tahrîm’in 1074 harfi ve Lût’un ölümü",
+      "pages": [
+        26
+      ],
+      "summary": "Tahrîm suresi için ileri sürülen 1074 harf, Hûd’un ölümü ile Lût’un ölümü arasındaki 1074 yıla eşlenir.",
+      "steps": [
+        {
+          "label": "Hûd’un ölümü ile Lût’un ölümü",
+          "operands": [
+            2965,
+            1891
+          ],
+          "expected": 1074,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 66,
+          "kind": "letters",
+          "claimed": 1074,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "ad-enbiya",
+      "title": "Enbiyâ’nın 1169 kelimesi ve İshak’ın doğumu",
+      "pages": [
+        26
+      ],
+      "summary": "Enbiyâ suresi için verilen 1169 kelime, Âd’ın helâki ile İshak’ın MÖ 1919 doğumu arasındaki farkla ilişkilendirilir.",
+      "steps": [
+        {
+          "label": "Âd’ın helâki ile İshak’ın doğumu",
+          "operands": [
+            3088,
+            1919
+          ],
+          "expected": 1169,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 21,
+          "kind": "words",
+          "claimed": 1169,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "hud-hucurat",
+      "title": "Hucurât’ın 347 kelimesi ve İdris’in yönetimi",
+      "pages": [
+        26,
+        27
+      ],
+      "summary": "Hucurât’ın 347 kelime olduğu savı, Hûd için önerilen Kâbe yapımı ile İdris’in Mısır’da yönetime başladığı kabul edilen MÖ 2771 arasındaki yıla bağlanır.",
+      "steps": [
+        {
+          "label": "Önerilen Kâbe yapımı ile İdris’in yönetim başlangıcı",
+          "operands": [
+            3118,
+            2771
+          ],
+          "expected": 347,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 49,
+          "kind": "words",
+          "claimed": 347,
+          "label": ""
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "ad-aliimran",
+      "title": "Âl-i İmrân’daki 1888 lâm ve Eyyûb bağlantısı",
+      "pages": [
+        27
+      ],
+      "summary": "Âl-i İmrân’daki lâm harfinin 1888 tekrarı, Âd’ın helâki ile Eyyûb’un MÖ 1200 doğumu arasındaki farka bağlanır.",
+      "steps": [
+        {
+          "label": "Âd’ın helâki ile Eyyûb’un doğumu",
+          "operands": [
+            3088,
+            1200
+          ],
+          "expected": 1888,
+          "operator": "subtract",
+          "unit": "yıl"
+        }
+      ],
+      "counts": [
+        {
+          "surah": 3,
+          "kind": "occurrences",
+          "claimed": 1888,
+          "label": "Lâm tekrarı",
+          "letters": [
+            "ل"
+          ]
+        }
+      ],
+      "refs": [],
+      "notes": [],
+      "topic": "hud",
+      "chapter": "c1"
+    },
+    {
+      "id": "irem-yerlesim",
+      "title": "İrem için önerilen yerler ve tarih çerçevesi",
+      "pages": [
+        27,
+        28
+      ],
+      "summary": "Yazar İrem’i Mısır’daki Heliopolis veya Armant ile ilişkilendirmeyi düşünür. Armant’ı Luksor’un yaklaşık 20 km güneyinde konumlandırır; Mısır’ın 30 hanedanlı tarihini yaklaşık MÖ 3000’den başlatıp kendi Âd helâki tarihinden sonrasına yerleştirir. Arabistan’daki farklı yer önerisini uygun bulmadığını belirtir.",
+      "steps": [],
+      "counts": [],
+      "refs": [
+        [
+          89,
+          6
+        ],
+        [
+          89,
+          7
+        ],
+        [
+          89,
+          8
+        ]
+      ],
+      "notes": [
+        "Bu bölümde yeni bir harf/kelime eşitliği yoktur; sayısal kronolojiye eşlik eden coğrafi ve tarihsel yorumlar vardır.",
+        "Bu yer özdeşleştirmeleri yazarın görüşleridir. Hûd tarihlerinin kesinliğini sağlayamadığını 28. sayfada kendisi de belirtir."
+      ],
+      "topic": "context",
+      "chapter": "c1"
+    },
+    {
+      "id": "punt-mekke",
+      "title": "Punt–Mekke görüşü ve bölümün diğer sayıları",
+      "pages": [
+        28,
+        29,
+        30
+      ],
+      "summary": "Kitap, Punt ile Mısır arasındaki ticareti MÖ 26. yüzyıl ve 4. Hanedan bağlamında anıp kuzeyden dolaşan kara yolculuğu için 120 gün verir. Yazar Punt’u Mekke ile özdeşleştirmeyi; Kâbe’nin “Boniat/Boniat İbrahim” ve “Nather/Netjer” gibi adları arasında ilişki kurmayı önerir. Bakara 127 ve İbrahim 37’yi, yapının temellerinin İbrahim’den önce bulunmuş olabileceği yorumunda kullanır.",
+      "steps": [],
+      "counts": [],
+      "refs": [
+        [
+          2,
+          127
+        ],
+        [
+          14,
+          37
+        ]
+      ],
+      "notes": [
+        "120 gün bir yolculuk süresi olarak aktarılır; Kur’an harflerinden çıkarılmış yeni bir denklem değildir.",
+        "Yer adı benzerlikleri ve yapı tarihi yorumu burada doğrulanmış arkeolojik sonuç olarak sunulmaz."
+      ],
+      "topic": "context",
+      "chapter": "c1"
+    }
+  ]
+}

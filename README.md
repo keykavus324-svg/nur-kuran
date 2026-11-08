@@ -205,3 +205,14 @@ Pages derlemesi HTML'de ve çevrimdışı listesinde içerik sürümüne göre a
 - Hazırlanmış çevrimdışı içerikle üç araç ve PNG üretimi internetsiz kullanılabilir.
 
 Test: `node test-v16.mjs`. Masanın sınırı/kalıcılığı ve tam metni; koleksiyon kaçışları, tekilleştirme, sıralama, ad değiştirme, silme onayı, yedek geri yükleme/birleştirme, geçersiz/sınır aşan dosyalarda veri koruma; gerçek PNG imzası/boyutları; Bakara 282'nin Arapça ve Türkçe kelimelerinin tamamının çizilmesi; 320–768px ve çevrimdışı çalışma doğrulanır. V2–V15 regresyonları, Pages alt dizin ve eski service worker'dan güncelleme testleri geçti. WebKit iPhone 13 emülasyonunda üç ekran ve PNG indirme de kontrol edildi; fiziksel cihaz testi değildir.
+
+## v17: Sayısal İncelemeler — ilk hazırlık dilimi
+
+- `#sayisal`: PDF gömmek yerine yerel, tamamen Türkçe açıklamalı katalog. Arama, konu filtresi, 8 kayıtlık sayfalama; masaüstü menüsü, Keşfet ve ayarlar girişleri.
+- **Kapsam:** 248 sayfalık kullanıcı kaynağının yalnızca PDF 8–30 sayfaları (giriş ve I. bölüm) hazır. 44 kayıt, 34 aritmetik işlem, 41 yerel sayım tanımı ve 2 kaynak tablo. Kayıt sayısı “kanıt sayısı” değildir. II–V, sonuç, ek ve sözlük hazır değildir; menü bunu açıkça gösterir.
+- Yazar: Hişam Emin el-Mısrî, *Historical Quran Code*. Türkçe içerik açıklayıcı uyarlamadır, tam ve kelimesi kelimesine çeviri değildir. Her kayıtta PDF sayfası, yazarın iddiası, varsayımlar ve kaynağa özgü belirsizlikler bulunur. Aritmetik doğruluğu tarihsel/dinî çıkarımın kanıtı olarak sunulmaz.
+- `public/data/qurancode-tr.json` yerel veri dosyasıdır. `research/build-qurancode-tr.py` bu dosyayı ve hazırlık durumunu üretir; bütün işlemleri ve 1000/1824 tablo toplamlarını denetler. Kullanıcının PDF'si veya ham İngilizce çıkarımı yayımlanmaz.
+- Yeniden hesaplama penceresi 0–1.000.000 arasındaki tam sayıları kabul eder; özgün savı değiştirmez. İlgili ayet bağlantıları mevcut tam sure okuyucusunu açar.
+- Sayım laboratuvarı yerel Osmanî metni kullanır: NFC, Arapça Unicode harfleri, işaret/hareke/uzatma temizliği, isteğe bağlı elif birleştirme ve Fâtiha dışında başlangıç besmelesini çıkarma. Baş/son boşluk ve BOM temizlenir. Tam kural arayüzde açıklanır. Yerel sonuç ile kitabın rakamı ayrı gösterilir; eşleşme veya fark tarihsel yorumu tek başına doğrulamaz/çürütmez. Kaynak tablolardaki değerler yerel olarak doğrulanmış sayımlar gibi etiketlenmez.
+- Önceden hazırlanan çevrimdışı pakete Türkçe veri dahildir; eski notlar, koleksiyonlar, Arapça kaynak ve Diyanet meali değişmez.
+- `node test-v17.mjs`: 44 ayrıntı ekranı, 34 işlem, 41 sayım tanımının çalışması, tablolar, arama/filtre/sayfalama, değiştirilebilir hesaplama, besmele anahtarı, tam sure bağlantısı, 320–1440px taşma ve çevrimdışı yeniden yükleme. Bu testler kitabın tarihsel iddialarını doğrulamaz.
